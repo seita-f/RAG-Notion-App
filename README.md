@@ -11,6 +11,5 @@ Additionally, I set a restriction on not spending any money during the app devel
   
 # Result
 
-# Evaluation
 
 # Let's get started!
