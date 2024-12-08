@@ -1,4 +1,4 @@
-![Screen Shot 2024-12-08 at 21 03 30](https://github.com/user-attachments/assets/b20cb9bf-77fe-4e45-842e-cc9b0806abdf)# Description
+# Description
 The technology of Retrieval-Augmented Generation (RAG) using Large Language Models (LLMs) has been gaining popularity recently. To deepen my understanding of this field, I decided to create a simple desktop application for RAG using Notion as a dataset. Notion is a tool I frequently use for taking notes and studying, making it the perfect choice for this project. <br>
 Additionally, I set a restriction on not spending any money during the app development process
 
