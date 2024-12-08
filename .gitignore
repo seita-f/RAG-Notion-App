@@ -1,0 +1,11 @@
+# Ignore config file
+config.yml
+
+# Ignore DB folder
+/chroma_db/
+
+# Ignore venv
+/venv/
+
+# Ignore test file
+test.py
