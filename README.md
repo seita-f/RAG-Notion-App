@@ -3,7 +3,7 @@ The technology of Retrieval-Augmented Generation (RAG) using Large Language Mode
 Additionally, I set a restriction on not spending any money during the app development process
 
 # History
-Version | Function
+Version | Description
 --- | --- 
 V1 | Simple RAG App with Notion API
 V2 | Save prompt history & Option for changing tempeature (curently working on this part)
