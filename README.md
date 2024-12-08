@@ -5,7 +5,6 @@ Additionally, I set a restriction on not spending any money during the app devel
 # History
 
 
-
 # Technologies & Env
 - Python 3.11
 - Notion API
