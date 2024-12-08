@@ -1,8 +1,15 @@
 """
 UI using streamlit
 """
+import sys
+import os
 import streamlit as st
 from streamlit_option_menu import option_menu  # サイドメニューのライブラリ
+
+# プロジェクトのルートディレクトリをモジュール検索パスに追加
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from llm import RAGApp
 
 # ユーザーインターフェースの設定
 st.set_page_config(page_title="RAG Desktop App", layout="wide")
@@ -21,36 +28,17 @@ with st.sidebar:
 if selected == "Chat":
     st.title("Chat with RAG Bot")
     
-    # 会話エリア
-    chat_container = st.container()
-    with chat_container:
-        # これまでの会話履歴
-        if "conversation" in st.session_state and st.session_state.conversation:
-            for message in st.session_state.conversation:
-                if message["role"] == "user":
-                    st.text(f"User: {message['content']}")
-                else:
-                    st.text(f"Bot: {message['content']}")
+    # 入力フォーム
+    user_input = st.text_input("Enter your message:")
+    if st.button("Send"):
+        if user_input:
+            # RAGApp を使用して応答を生成
+            rag_app = RAGApp()
+            response = rag_app.get_response(user_input)
 
-        # 入力フォーム
-        user_input = st.text_input("Enter your message:", key="user_input")
-        if st.button("Send"):
-            if user_input:
-                # 入力を会話メモリに保存
-                st.session_state.memory.add_user_message(user_input)
-
-                # 簡易応答生成（ここをRAG対応に変更可能）
-                bot_response = f"Echo: {user_input}"
-                st.session_state.memory.add_ai_message(bot_response)
-
-                # 会話履歴を保存
-                if "conversation" not in st.session_state:
-                    st.session_state.conversation = []
-                st.session_state.conversation.append({"role": "user", "content": user_input})
-                st.session_state.conversation.append({"role": "bot", "content": bot_response})
-
-                # 会話内容を更新して表示
-                st.experimental_rerun()
+            # ボットの応答を表示
+            st.write("Bot's response:")
+            st.write(response)
 
 # Settingsが選択された場合のレイアウト
 elif selected == "Settings":
