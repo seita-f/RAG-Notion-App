@@ -17,9 +17,8 @@ Additionally, I set a restriction on not spending any money during the app devel
 ![Screen Shot 2024-12-08 at 21 03 30](https://github.com/user-attachments/assets/d3579638-b138-4ae1-84c4-88b4e87a9ab4)
 
 ### After retreiving data from Notion:
-Notion
 ![Screen Shot 2024-12-08 at 20 15 27](https://github.com/user-attachments/assets/c1a13782-0aef-4213-83f8-241c4282b74e)
-RAG App
+<br>
 ![Screen Shot 2024-12-08 at 21 00 57](https://github.com/user-attachments/assets/1e3f3c3a-aca1-460f-b99c-460742db1f8a)
 
 # Let's get started!
