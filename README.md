@@ -6,7 +6,7 @@ Additionally, I set a restriction on not spending any money during the app devel
 Version | Description
 --- | --- 
 V1 | Simple RAG App with Notion API
-V2 | Save prompt history & Option for changing tempeature (curently working on this part)
+V2 | Option for changing tempeature & Require credential to use
 
 # Technologies & Env
 - Python 3.11
@@ -14,6 +14,7 @@ V2 | Save prompt history & Option for changing tempeature (curently working on t
 - Gemma (open source LLM)
 - LangChain
 - Streamlit (UI)
+- CPU
   
 # Result
 ### Original: 
