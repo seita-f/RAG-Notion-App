@@ -16,7 +16,6 @@ def load_config(file_path):
         except yaml.YAMLError as e:
             raise RuntimeError(f"Error parsing YAML file: {e}")
 
-# Notionページコンテンツを取得（ページング対応）
 def get_all_blocks(page_id, headers, notion_api_url):
     all_blocks = []
     url = f"{notion_api_url}/{page_id}/children"
@@ -25,7 +24,7 @@ def get_all_blocks(page_id, headers, notion_api_url):
         if response.status_code == 200:
             data = response.json()
             all_blocks.extend(data.get("results", []))
-            # ページング処理
+            
             if data.get("has_more"):
                 url = f"{notion_api_url}/{page_id}/children?start_cursor={data.get('next_cursor')}"
             else:
@@ -35,11 +34,11 @@ def get_all_blocks(page_id, headers, notion_api_url):
             break
     return all_blocks
 
+# テキストデータの正規化
 def normalize_text_data(content_list):
     normalized_content_list = [unicodedata.normalize('NFKC', text).strip().lower() for text in content_list]   
     return normalized_content_list 
 
-# ページタイトルを取得
 def get_page_title(page_id, headers):
     url = f"https://api.notion.com/v1/pages/{page_id}"
     response = requests.get(url, headers=headers)
@@ -55,19 +54,17 @@ def get_page_title(page_id, headers):
         print(f"Error: {response.status_code}, {response.text}")
         return None
 
-
-# ページ内のテキストを抽出（修正版）
 def extract_text_from_blocks(blocks, headers, notion_api_url):
     content_list = []
     for block in blocks:
         block_type = block.get("type")
         
-        # テキスト系ブロック
+        # テキストブロック
         if block_type in ["paragraph", "heading_1", "heading_2", "heading_3", "bulleted_list_item", "numbered_list_item"]:
             rich_texts = block[block_type].get("rich_text", [])
             content_list.extend([text["text"]["content"] for text in rich_texts if "text" in text])
         
-        # テーブルのブロック
+        # テーブルブロック
         elif block_type == "table":
             table_id = block["id"]
             child_blocks = get_all_blocks(table_id, headers, notion_api_url)
@@ -77,7 +74,7 @@ def extract_text_from_blocks(blocks, headers, notion_api_url):
                     row_text = ["".join([cell["text"]["content"] for cell in cell_texts if "text" in cell]) for cell_texts in row_cells]
                     content_list.append("\t".join(row_text))  # セルをタブ区切りで結合
         
-        # 子ブロックの再帰処理
+        # 子ブロック 
         if block.get("has_children"):
             child_id = block["id"]
             child_blocks = get_all_blocks(child_id, headers, notion_api_url)
@@ -85,9 +82,9 @@ def extract_text_from_blocks(blocks, headers, notion_api_url):
     
     return content_list
 
-# メイン処理（修正版）
+
 def main():
-    # YAML設定ファイルを読み込む
+    # YAML
     config = load_config("../config.yml")
     NOTION_API_KEY = config["NOTION"]["API_KEY"]
     NOTION_API_URL = config["NOTION"]["API_URL"]
@@ -100,7 +97,6 @@ def main():
         "Notion-Version": NOTION_VERSION
     }
 
-    # ページごとにコンテンツを取得
     all_content = {}
     for page_id in PAGE_IDS:
         # ページのタイトルを取得
@@ -126,6 +122,6 @@ def main():
 
     print("Content saved to notion_contents.json")
 
-# 実行
+# run
 if __name__ == "__main__":
     main()

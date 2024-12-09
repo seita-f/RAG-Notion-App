@@ -7,7 +7,7 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain_core.runnables import RunnablePassthrough
 
 class RAGApp:
-    def __init__(self, config_path="config.yml"):
+    def __init__(self, config_path="config.yml", temperature=0.5):
         # Load config
         self.config = self.load_config(config_path)
         self.huggingface_api = self.config["HUGGING_FACE"]["API_KEY"]
@@ -16,7 +16,7 @@ class RAGApp:
         # HuggingFace Endpoint setup
         self.repo_id = "google/gemma-2b-it"
         self.llm = HuggingFaceEndpoint(
-            repo_id=self.repo_id, max_length=1024, temperature=0.8, timeout=300
+            repo_id=self.repo_id, max_length=1024, temperature=temperature, timeout=500
         )
 
         # Embedding function and database
@@ -70,6 +70,17 @@ class RAGApp:
 
     def get_response(self, question):
 
+        #-------- For testing (no RAG) ----
+        # template = """Question: {question}
+        # Answer: Answer with full detail and explanation"""
+        # prompt = PromptTemplate.from_template(template)
+        # llm_chain = (
+        #     RunnablePassthrough() 
+        #     | self.llm
+        # )
+        # result = llm_chain.invoke(question)
+        #----------------------------------
+
         rag_chain = (
             RunnablePassthrough()  # Pass the formatted string directly
             | self.llm  # The HuggingFaceEndpoint processes the input string
@@ -86,11 +97,11 @@ class RAGApp:
         # Run the chain
         result = rag_chain.invoke(formatted_input)
 
-        # 不要なフレーズを削除
+        # Remove unnecessary comment
         if "The context explains that" in result:
             cleaned_response = result.replace("The context explains that ", "")
             return cleaned_response
-        
+
         return result
 
 def main():
