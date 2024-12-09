@@ -6,7 +6,7 @@ Additionally, I set a restriction on not spending any money during the app devel
 Version | Description
 --- | --- 
 V1 | Simple RAG App with Notion API
-V2 | Option for changing tempeature & Require credential to use
+V2 | Option for changing tempeature & Require credentials to use
 
 # Technologies & Env
 - Python 3.11
