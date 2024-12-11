@@ -4,17 +4,7 @@ import json
 import unicodedata
 import os
 import sys
-
-
-def load_config(file_path):
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"Config file not found: {file_path}")
-
-    with open(file_path, "r") as file:
-        try:
-            return yaml.safe_load(file)
-        except yaml.YAMLError as e:
-            raise RuntimeError(f"Error parsing YAML file: {e}")
+from dotenv import load_dotenv
 
 def get_all_blocks(page_id, headers, notion_api_url):
     all_blocks = []
@@ -84,43 +74,53 @@ def extract_text_from_blocks(blocks, headers, notion_api_url):
 
 
 def main():
-    # YAML
-    config = load_config("../config.yml")
-    NOTION_API_KEY = config["NOTION"]["API_KEY"]
-    NOTION_API_URL = config["NOTION"]["API_URL"]
-    NOTION_VERSION = config["NOTION"]["VERSION"]
-    PAGE_IDS = config["NOTION"]["PAGE_IDS"]
+    try:
+        # .env
+        load_dotenv()
+        NOTION_API_KEY = os.getenv('NOTION_API_KEY')
+        NOTION_API_URL = os.getenv('NOTION_API_URL')
+        NOTION_VERSION = os.getenv('NOTION_VERSION')
+        PAGE_IDS = os.getenv('NOTION_PAGE_IDS')
+        PAGE_IDS_LIST = []
+        if PAGE_IDS:
+            PAGE_IDS_LIST = [page_id.strip() for page_id in PAGE_IDS.split(",") if page_id.strip()]
+        else:
+            print("NOTION_PAGE_IDS is not set.")
 
-    # ヘッダー設定
-    headers = {
-        "Authorization": f"Bearer {NOTION_API_KEY}",
-        "Notion-Version": NOTION_VERSION
-    }
+        # ヘッダー設定
+        headers = {
+            "Authorization": f"Bearer {NOTION_API_KEY}",
+            "Notion-Version": NOTION_VERSION
+        }
 
-    all_content = {}
-    for page_id in PAGE_IDS:
-        # ページのタイトルを取得
-        title = get_page_title(page_id, headers)
+        all_content = {}
+        for page_id in PAGE_IDS_LIST:
 
-        # ページのすべてのブロックを取得
-        blocks = get_all_blocks(page_id, headers, NOTION_API_URL)
+            # ページのタイトルを取得
+            title = get_page_title(page_id, headers)
 
-        # ブロックからテキストを抽出
-        page_content = extract_text_from_blocks(blocks, headers, NOTION_API_URL)
-        normalized_page_content = normalize_text_data(page_content)
+            # ページのすべてのブロックを取得
+            blocks = get_all_blocks(page_id, headers, NOTION_API_URL)
 
-        # コンテンツを1つの文字列に結合
-        full_text = "\n".join(normalized_page_content)
+            # ブロックからテキストを抽出
+            page_content = extract_text_from_blocks(blocks, headers, NOTION_API_URL)
+            normalized_page_content = normalize_text_data(page_content)
 
-        # タイトルをキーにして保存
-        all_content[title] = full_text
-        print(f"Retrieved the contents from {title}")
+            # コンテンツを1つの文字列に結合
+            full_text = "\n".join(normalized_page_content)
 
-    # 取得結果をJSON形式で保存
-    with open("notion_contents.json", "w", encoding="utf-8") as file:
-        json.dump(all_content, file, ensure_ascii=False, indent=4)
+            # タイトルをキーにして保存
+            all_content[title] = full_text
+            print(f"Retrieved the contents from {title}")
 
-    print("Content saved to notion_contents.json")
+        # 取得結果をJSON形式で保存
+        with open("notion_contents.json", "w", encoding="utf-8") as file:
+            json.dump(all_content, file, ensure_ascii=False, indent=4)
+
+        print("Content saved to notion_contents.json")
+
+    except Exception as e:
+        print(f"Error: {e}")
 
 # run
 if __name__ == "__main__":

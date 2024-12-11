@@ -10,10 +10,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from llm import RAGApp
 
-# User Interface
+# ユーザインターフェース
 st.set_page_config(page_title="RAG Desktop App", layout="wide")
 
-# Side bar
+# サイドバー
 with st.sidebar:
     selected = option_menu(
         menu_title="Menu",
@@ -27,14 +27,12 @@ with st.sidebar:
 if "temperature" not in st.session_state:
     st.session_state.temperature = 0.3  # default temperature
 
-# Layout for Chat
+# チャットレイアウト
 if selected == "Chat":
     st.title("Chat with RAG Bot")
     
-    # Input
+    # ユーザ入力
     st.markdown("### Enter your message:")
-    
-    # Text area
     user_input = st.text_area(
         label="",
         placeholder="Type your question here...",
@@ -43,26 +41,29 @@ if selected == "Chat":
 
     if st.button("Send"):
         if user_input.strip():
-            # spinner
+            # スピナー
             with st.spinner("Generating response..."):
-                # RAGApp 
-                rag_app = RAGApp(config_path="config.yml", temperature=st.session_state.temperature)
+
+                # DEBUG:
+                print(f"##### Passing temp to RAG: {st.session_state.temperature} #####")
+
+                # RAGApp
+                rag_app = RAGApp(temperature=st.session_state.temperature)
                 response = rag_app.get_response(user_input)
 
-            # Display result
             st.markdown("### Bot's response:")
-            st.markdown(response, unsafe_allow_html=True)  # Enable HTML rendering
+            st.markdown(response, unsafe_allow_html=True)  
 
-# Layout for Settings
+# 設定レイアウト
 elif selected == "Settings":
     st.title("Settings")
     st.write("Here you can configure the app settings.")
     st.write("#### Adjust the creativity of responses:")
-    # Temperature slider
+    # Temperature スライダー
     st.session_state.temperature = st.slider(
-        "Temperature (1-10):",  # label
-        min_value=0.1,          # min 
-        max_value=1.0,          # max
-        value=st.session_state.temperature,     # default
-        step=0.1                # step
+        "Temperature (1-10):",  # ラベル
+        min_value=0.1,          # 最小値
+        max_value=1.0,          # 最大値
+        value=st.session_state.temperature,  # デフォルト temperature
+        step=0.1                # ステップ
     )
