@@ -18,11 +18,9 @@ V1.1 | Option for changing tempeature
   
 # Result
 ### Original: 
-![Screen Shot 2024-12-08 at 21 03 30](https://github.com/user-attachments/assets/d3579638-b138-4ae1-84c4-88b4e87a9ab4)
+
 
 ### After retreiving data from Notion:
-![Screen Shot 2024-12-08 at 20 15 27](https://github.com/user-attachments/assets/c1a13782-0aef-4213-83f8-241c4282b74e)
-<br>
-![Screen Shot 2024-12-08 at 21 00 57](https://github.com/user-attachments/assets/1e3f3c3a-aca1-460f-b99c-460742db1f8a)
+![Screen Shot 2024-12-23 at 17 16 09](https://github.com/user-attachments/assets/28419791-8375-4d79-aec9-d613f865a8be)
+![Screen Shot 2024-12-23 at 17 12 39](https://github.com/user-attachments/assets/d8c5cc11-bd04-474d-ad47-16521b69c094)
 
-# Let's get started!
