@@ -5,7 +5,7 @@ Additionally, I set a restriction on not spending any money during the app devel
 # History
 Version | Description
 --- | --- 
-V1.0 | Notion API & Prototype
+V1.0 | Notion API & RAG Prototype App
 V1.1 | Option for changing tempeature
 V2.0 | LangChain History Memory
 
