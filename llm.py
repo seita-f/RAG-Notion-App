@@ -1,17 +1,18 @@
 import os
 from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEndpoint, HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
-from langchain.prompts import (
-    PromptTemplate,
-    ChatPromptTemplate,
-)
+from langchain_chroma import Chroma 
+from langchain.prompts import PromptTemplate
+
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_core.runnables import RunnablePassthrough
+from langchain_community.vectorstores import Chroma as DeprecatedChroma
+
+from langchain.chains import RetrievalQA
 
 
 class RAGApp:
-    def __init__(self, temperature=0.5):
+    def __init__(self, temperature=0.4):
         # env
         load_dotenv()
         self.HUGGING_FACE_API_KEY = os.getenv('HUGGING_FACE_API_KEY')
@@ -28,8 +29,9 @@ class RAGApp:
             repo_id=self.repo_id, max_length=1024, temperature=temperature, timeout=500
         )
 
-        # Embedding function and database
-        self.embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+        # Embedding function and database all-MiniLM-L12-v2
+        # self.embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+        self.embedding_function = HuggingFaceEmbeddings(model_name="all-mpnet-base-v2")
         self.db = self.initialize_database()
 
         # RAGプロンプト
@@ -41,24 +43,13 @@ class RAGApp:
                 "Answer with full detail and explanation:"
             )
         )
-
+        
         # RAG対話型プロンプト
         # self.prompt = ChatPromptTemplate.from_messages([
         #     ("system", "You are a helpful assistant. Use the following context to answer the question."),
         #     ("human", "Context: {context}. Question: {question}. Please answer with full detail and explanation:")
         # ])
     
-    @staticmethod
-    def load_config(file_path):
-        if not os.path.exists(file_path):
-            raise FileNotFoundError(f"Config file not found: {file_path}")
-
-        with open(file_path, "r") as file:
-            try:
-                return yaml.safe_load(file)
-            except yaml.YAMLError as e:
-                raise RuntimeError(f"Error parsing YAML file: {e}")
-
     def initialize_database(self, persist_directory="./chroma_db"):
         try:
             return Chroma(
@@ -67,7 +58,6 @@ class RAGApp:
             )
         except TypeError:
             print("Falling back to deprecated Chroma class.")
-            from langchain_community.vectorstores import Chroma as DeprecatedChroma
             return DeprecatedChroma(
                 persist_directory=persist_directory,
                 embedding_function=self.embedding_function,
@@ -80,10 +70,10 @@ class RAGApp:
 
     def __format_rag_input__(self, context, question):
         return self.prompt.format(context=context, question=question)
-
+    
     def get_response(self, question):
 
-        #-------- For testing (no RAG) ----
+        #-------- Test: raw answer (no RAG) ----
         # template = """Question: {question}
         # Answer: Answer with full detail and explanation"""
         # prompt = PromptTemplate.from_template(template)
@@ -93,17 +83,20 @@ class RAGApp:
         # )
         # result = llm_chain.invoke(question)
         #----------------------------------
-
+        
         rag_chain = (
             RunnablePassthrough()  # Pass the formatted string directly
             | self.llm  # The HuggingFaceEndpoint processes the input string
         )
 
-        # ドキュメントより関連データを取得
         retriever = self.db.as_retriever(search_type="mmr", search_kwargs={'k': 4, 'fetch_k': 20})
         docs = retriever.invoke(question)
         formatted_context = self.__format_docs__(docs)  # Format the documents into a context string
         
+        # print("DEBUG (formatted context):")
+        # print(formatted_context)
+        # print()
+
         # プロンプト生成
         formatted_input = self.__format_rag_input__(context=formatted_context, question=question)
         result = rag_chain.invoke(formatted_input)
