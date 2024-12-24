@@ -22,9 +22,4 @@ V2.0 | LangChain History Memory
 
 
 ### After retreiving data from Notion:
-Notion:
-![Screen Shot 2024-12-23 at 17 16 09](https://github.com/user-attachments/assets/28419791-8375-4d79-aec9-d613f865a8be)
-<br>
-App:
-![Screen Shot 2024-12-23 at 17 12 39](https://github.com/user-attachments/assets/d8c5cc11-bd04-474d-ad47-16521b69c094)
 
