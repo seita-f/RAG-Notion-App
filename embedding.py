@@ -1,11 +1,10 @@
 import json
-import yaml
 import os
 from dotenv import load_dotenv
 
 from langchain_text_splitters import CharacterTextSplitter
-from langchain.schema import Document  # LangChainのDocumentクラスを使用
-from langchain_community.vectorstores import Chroma
+from langchain.schema import Document  
+from langchain_chroma import Chroma 
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
@@ -19,8 +18,8 @@ def create_documents_from_json(json_data):
     documents = []
     for key, value in json_data.items():
         if isinstance(value, str):
-            # Documentオブジェクトを作成
-            documents.append(Document(page_content=f"{key}: {value}"))
+            # Create Document and add metadata (page title) 
+            documents.append(Document(page_content=value, metadata={"key": key}))
         else:
             print(f"Unexpected data type for key {key}: {type(value)}")
     return documents
@@ -28,10 +27,19 @@ def create_documents_from_json(json_data):
 def clean_text(text):
     return " ".join(line.strip() for line in text.splitlines() if line.strip())
 
-def split_and_clean_documents(documents, chunk_size=1000, chunk_overlap=0):
-    text_splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+def split_and_clean_documents(documents, chunk_size=1000, chunk_overlap=10):
+    """
+    """
+    # chain_type=stuff, map_reduce, refine, map_rerank
+    text_splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap, separator='\n')
     split_docs = text_splitter.split_documents(documents)
-    cleaned_docs = [Document(page_content=clean_text(doc.page_content)) for doc in split_docs]
+    cleaned_docs = [
+        Document(
+            page_content=clean_text(doc.page_content),
+            metadata=doc.metadata  
+        )
+        for doc in split_docs
+    ]
     return cleaned_docs
 
 def create_and_persist_chroma_db(cleaned_docs, embedding_model_name, persist_directory):
@@ -79,11 +87,15 @@ def main():
         
         # ドキュメントを分割してクリーンアップ
         cleaned_docs = split_and_clean_documents(documents)
-        
+        print()
+        print("DEBUG:")
+        print(cleaned_docs)
+        print()
         # Chromaデータベースを作成して永続化
         create_and_persist_chroma_db(
             cleaned_docs,
-            embedding_model_name="all-MiniLM-L6-v2",
+            # embedding_model_name="all-MiniLM-L12-v2",
+            embedding_model_name="all-mpnet-base-v2",
             persist_directory=PERSIST_DIRECTORY_PATH,
         )
     except Exception as e:

@@ -1,5 +1,4 @@
 import requests
-import yaml
 import json
 import unicodedata
 import os

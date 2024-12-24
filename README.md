@@ -5,8 +5,9 @@ Additionally, I set a restriction on not spending any money during the app devel
 # History
 Version | Description
 --- | --- 
-V1.0 | Simple RAG App with Notion API
+V1.0 | Notion API & RAG Prototype App
 V1.1 | Option for changing tempeature
+
 
 # Technologies & Env
 - Python 3.11
@@ -18,11 +19,13 @@ V1.1 | Option for changing tempeature
   
 # Result
 ### Original: 
-![Screen Shot 2024-12-08 at 21 03 30](https://github.com/user-attachments/assets/d3579638-b138-4ae1-84c4-88b4e87a9ab4)
+```How much is the accommodation at Warsaw University of Technology?```
+![Screen Shot 2024-12-24 at 18 18 52](https://github.com/user-attachments/assets/36fea644-8cb5-4db7-8f3f-a1f65cb6e5f3)
 
 ### After retreiving data from Notion:
-![Screen Shot 2024-12-08 at 20 15 27](https://github.com/user-attachments/assets/c1a13782-0aef-4213-83f8-241c4282b74e)
-<br>
-![Screen Shot 2024-12-08 at 21 00 57](https://github.com/user-attachments/assets/1e3f3c3a-aca1-460f-b99c-460742db1f8a)
+![Screen Shot 2024-12-24 at 18 19 25](https://github.com/user-attachments/assets/0e81bb49-aa00-44d4-b09b-4087939f3c53)
 
-# Let's get started!
+```How much is the accommodation at Warsaw University of Technology?```
+![Screen Shot 2024-12-24 at 18 21 52](https://github.com/user-attachments/assets/7a4afe36-ee11-45e7-a289-7e4b45162e6a)
+**The answer is based on the content in Notion**
+
