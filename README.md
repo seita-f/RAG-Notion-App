@@ -6,7 +6,7 @@ Additionally, I set a restriction on not spending any money during the app devel
 Version | Description
 --- | --- 
 V1.0 | Notion API & RAG Prototype App
-V1.1 | Option for changing tempeature
+V1.1 | Added option for changing tempeature & evaluation
 
 
 # Technologies & Env
@@ -28,4 +28,7 @@ V1.1 | Option for changing tempeature
 ```How much is the accommodation at Warsaw University of Technology?```
 ![Screen Shot 2024-12-24 at 18 21 52](https://github.com/user-attachments/assets/7a4afe36-ee11-45e7-a289-7e4b45162e6a)
 **The answer is based on the content in Notion**
+
+# Evaluation
+
 
