@@ -7,7 +7,7 @@ Version | Description
 --- | --- 
 V1.0 | Notion API & RAG Prototype App
 V1.1 | Option for changing tempeature
-V2.0 | LangChain History Memory
+
 
 # Technologies & Env
 - Python 3.11
