@@ -8,8 +8,6 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain_core.runnables import RunnablePassthrough
 from langchain_community.vectorstores import Chroma as DeprecatedChroma
 
-from langchain.chains import RetrievalQA
-
 
 class RAGApp:
     def __init__(self, temperature=0.4):
@@ -71,6 +69,7 @@ class RAGApp:
     def __format_rag_input__(self, context, question):
         return self.prompt.format(context=context, question=question)
     
+
     def get_response(self, question):
 
         #-------- Test: raw answer (no RAG) ----
