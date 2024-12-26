@@ -1,0 +1,40 @@
+{
+    "user_input": [
+        "Does Planet Z experience 5 hours of daylight and 5 hours of night in a single day? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
+        "Are Silicoids carbon-based organisms? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
+        "Can the Winds of Memory preserve and share the memories of Silicoids? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
+        "Are buildings and vehicles on Planet Z constructed using traditional materials like metals and concrete? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
+        "Is the Infinite Corridor located on the surface of Planet Z? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation."
+    ],
+    "response": [
+        "\n\nYes, Planet Z experiences 5 hours of daylight and 5 hours of night in a single day. This is because it is located in a binary star system, resulting in extreme day and night cycles.",
+        "\nNo, the context does not provide any information about whether Silicoids are carbon-based organisms, so I cannot answer this question from the provided context.",
+        "\n\nSure, the context indicates that the Winds of Memory can preserve and share the memories of Silicoids. The passage states that the phenomenon serves as the primary means of preserving the planet's culture and history, suggesting that the Winds of Memory have the ability to capture and transmit memories from one generation to the next.",
+        "\n\nNo, the context does not provide any information about the construction of buildings and vehicles on Planet Z, so I cannot answer this question from the context.",
+        "\n\nThe context does not provide any information about the Infinite Corridor being located on the surface of Planet Z, so I cannot answer this question from the provided context."
+    ],
+    "ground_truth": [
+        "Yes",
+        "No",
+        "Yes",
+        "No",
+        "No"
+    ],
+    "contexts": [
+        [
+            "environment planet z belongs to a binary star system, resulting in extreme day and night cycles. during the day, it is illuminated by a pale blue sun, while at night, a second sun emits a deep red glow. the surface is largely covered with translucent crystals, creating natural prisms that paint the sky in iridescent hues. day length : a single day on planet z lasts 10 earth hours, with 5 hours of daylight and 5 hours of night. distance : located approximately 450 light-years from earth. climate : the average annual temperature is around 30\u00b0c, similar to earth's equatorial regions, cooling to approximately 20\u00b0c at night. lifeforms silicoids the primary intelligent species on planet z, silicoids are silicon-based, semi-solid organisms that harness light and vibrations as their energy sources. communication is conducted via body-emitted light patterns rather than sound-based language. lifespan"
+        ],
+        [
+            "environment planet z belongs to a binary star system, resulting in extreme day and night cycles. during the day, it is illuminated by a pale blue sun, while at night, a second sun emits a deep red glow. the surface is largely covered with translucent crystals, creating natural prisms that paint the sky in iridescent hues. day length : a single day on planet z lasts 10 earth hours, with 5 hours of daylight and 5 hours of night. distance : located approximately 450 light-years from earth. climate : the average annual temperature is around 30\u00b0c, similar to earth's equatorial regions, cooling to approximately 20\u00b0c at night. lifeforms silicoids the primary intelligent species on planet z, silicoids are silicon-based, semi-solid organisms that harness light and vibrations as their energy sources. communication is conducted via body-emitted light patterns rather than sound-based language. lifespan"
+        ],
+        [
+            "periodic energy waves sweep across the planet, enabling those who come into contact with them to share memories with others. this phenomenon serves as the primary means of preserving the planet's culture and history. temporal vortexes found at the poles, these regions blend past and future landscapes physically. some inhabitants develop precognition abilities through prolonged exposure, though using this ability requires caution. social structure silicoid society is not composed of individuals but \"clusters,\" with each cluster fulfilling specific roles to maintain planetary harmony. problems are resolved by \"tuning specialists,\" experts who leverage resonance tech for conflict-free solutions. collective wisdom and collaboration are the cornerstones of their society. unsolved mysteries deep beneath the planet's surface lies a vast \"infinite corridor,\" believed to have been constructed by an ancient intelligent species."
+        ],
+        [
+            "its walls are inscribed with undecipherable symbols, speculated to be remnants of an interstellar civilization. planet z, a realm of light and vibration, captivates explorers with its mysteries and beauty, inspiring curiosity about the unknown depths of the universe!"
+        ],
+        [
+            "its walls are inscribed with undecipherable symbols, speculated to be remnants of an interstellar civilization. planet z, a realm of light and vibration, captivates explorers with its mysteries and beauty, inspiring curiosity about the unknown depths of the universe!"
+        ]
+    ]
+}
