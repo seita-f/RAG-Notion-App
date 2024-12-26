@@ -27,22 +27,22 @@ class RAGApp:
             repo_id=self.repo_id, max_length=1024, temperature=temperature, timeout=500
         )
 
-        # Embedding function and database all-MiniLM-L12-v2
+        # Embedding function and database
         # self.embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
         self.embedding_function = HuggingFaceEmbeddings(model_name="all-mpnet-base-v2")
         self.db = self.initialize_database()
 
-        # RAGプロンプト
+        # prompt
         self.prompt = PromptTemplate(
             template=(
-                "You are a helpful assistant. Use the following context to answer the question.\n\n"
-                "Context:\n{context}\n\n"
-                "Question:\n{question}\n\n"
-                "Answer with full detail and explanation:"
+                "You are an expert assistant. Use the following context to answer the question.\n"
+                "Context:\n{context}\n"
+                "Question:\n{question}\n"
+                # "Provide a detailed response based only on the given context."
             )
         )
-        
-        # RAG対話型プロンプト
+
+        # prompt for conversation
         # self.prompt = ChatPromptTemplate.from_messages([
         #     ("system", "You are a helpful assistant. Use the following context to answer the question."),
         #     ("human", "Context: {context}. Question: {question}. Please answer with full detail and explanation:")
@@ -66,13 +66,9 @@ class RAGApp:
             return "No relevant documents found."
         return "\n\n".join(doc.page_content for doc in docs)
 
-    def __format_rag_input__(self, context, question):
-        return self.prompt.format(context=context, question=question)
-    
+    def get_response(self, question, eval_mode=False):
 
-    def get_response(self, question):
-
-        #-------- Test: raw answer (no RAG) ----
+        #-------- Test: raw answer (no RAG system) ----
         # template = """Question: {question}
         # Answer: Answer with full detail and explanation"""
         # prompt = PromptTemplate.from_template(template)
@@ -88,24 +84,45 @@ class RAGApp:
             | self.llm  # The HuggingFaceEndpoint processes the input string
         )
 
+        # search type: similarity, mmr, ...
         retriever = self.db.as_retriever(search_type="mmr", search_kwargs={'k': 4, 'fetch_k': 20})
         docs = retriever.invoke(question)
-        formatted_context = self.__format_docs__(docs)  # Format the documents into a context string
-        
-        # print("DEBUG (formatted context):")
-        # print(formatted_context)
-        # print()
 
-        # プロンプト生成
-        formatted_input = self.__format_rag_input__(context=formatted_context, question=question)
-        result = rag_chain.invoke(formatted_input)
+        if eval_mode:
 
-        # 生成された回答から、不必要なコメントを削除
-        if "The context explains that" in result:
-            cleaned_response = result.replace("The context explains that ", "")
-            return cleaned_response
+            # only evalaute top context due to my PC spec
+            formatted_context = [docs[0].page_content] if docs[0] else ["No relevant documents found."]
+            
+            # Format the input
+            formatted_input = self.prompt.format(context=formatted_context, question=question)
+            # print("========== DEBUG: Formatted Input ==========")
+            # print(formatted_input)
 
-        return result
+            # Invoke the chain and debug the output
+            result = rag_chain.invoke(formatted_input)
+            # print("========== DEBUG: Raw LLM Output ==========")
+            # print(result)
+
+            return {
+                "user_input": question,
+                "contexts": formatted_context,
+                "response": result.strip(),  # Strip unnecessary whitespace
+            }
+        else:
+            formatted_context = self.__format_docs__(docs)  # Format the documents into a context string
+            # generate prompt
+            formatted_input = self.prompt.format(context=formatted_context, question=question)
+
+            print("DEBUG:")
+            print(formatted_input)
+
+            result = rag_chain.invoke(formatted_input)
+
+            if "The context explains that" in result:
+                cleaned_response = result.replace("The context explains that ", "")
+                return cleaned_response
+
+            return result
 
 def main():
     # インスタンス作成

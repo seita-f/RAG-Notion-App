@@ -12,7 +12,7 @@ import logging
 
 # RAGAS
 from ragas import evaluate
-from ragas.metrics import faithfulness, answer_relevancy, context_precision, context_recall
+from ragas.metrics import answer_correctness, answer_relevancy, context_recall
 from langchain_community.chat_models import ChatOllama
 from langchain_community.embeddings import OllamaEmbeddings
 from ragas.run_config import RunConfig
@@ -20,54 +20,37 @@ from ragas.run_config import RunConfig
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from llm import RAGApp
 
+
+# logging setting
+logging.basicConfig(
+    filename="evaluate/evaluation.log",
+    level=logging.DEBUG,  
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+os.environ["RAGAS_DEBUG"] = "true"
+
 # Questions
 questions = [
-    "Does Planet Z experience 5 hours of daylight and 5 hours of night in a single day? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
-    "Are Silicoids carbon-based organisms? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
-    "Can the Winds of Memory preserve and share the memories of Silicoids? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
-    "Are buildings and vehicles on Planet Z constructed using traditional materials like metals and concrete? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
-    "Is the Infinite Corridor located on the surface of Planet Z? Please answer with either 'Yes' or 'No'. Do not provide any additional explanation.",
+    "What phenomenon allows Silicoids to share their memories and preserve their culture?",
+    "How does the surface of Planet Z create iridescent hues in the sky?",
+    "What is the primary energy source for Silicoids on Planet Z?",
+    "What unique material is used for constructing buildings and vehicles on Planet Z?",
+    "What unsolved mystery lies deep beneath the surface of Planet Z?",
+
 ]
 
 # Ground Truth Answers
 ground_truth = [
-    "Yes",
-    "No",
-    "Yes",
-    "No",
-    "No",
+    "The 'Winds of Memory' enable Silicoids to share their memories and preserve their culture by sweeping periodic energy waves across the planet.",
+    "The translucent crystals covering the surface of Planet Z act as natural prisms, refracting light and painting the sky in iridescent hues.",
+    "Silicoids harness light and vibrations as their primary energy sources.",
+    "Buildings and vehicles on Planet Z are biologically 'grown' from crystals, which can communicate with intelligent lifeforms and function as tools and companions.",
+    "The 'Infinite Corridor', a vast subterranean structure inscribed with undecipherable symbols believed to be remnants of an ancient intelligent species, remains an unsolved mystery.",
 ]
-
-
-class EvalRAG(RAGApp):
-    def get_response(self, question):
-        rag_chain = (
-            RunnablePassthrough()  # Pass the formatted string directly
-            | self.llm  # The HuggingFaceEndpoint processes the input string
-        )
-
-        retriever = self.db.as_retriever(search_type="mmr", search_kwargs={"k": 4, "fetch_k": 20})
-        docs = retriever.invoke(question)
-
-        # Select only the first context
-        formatted_context = [docs[0].page_content] if docs else []
-
-        formatted_input = self.__format_rag_input__(
-            context=" ".join(formatted_context), question=question
-        )
-        result = rag_chain.invoke(formatted_input)
-
-        return {
-            "user_input": question,
-            "contexts": formatted_context,  # Pass the first context
-            "response": result,
-        }
 
 def main():
     try:
-        # model
-        # eval_rag = EvalRAG()
-
+        
         # data = {
         #     "user_input": [],
         #     "response": [],
@@ -77,8 +60,10 @@ def main():
 
         # # Get response for each question
         # for i, question in enumerate(questions):
-        #     response = eval_rag.get_response(question)
 
+        #     eval_rag = RAGApp()
+
+        #     response = eval_rag.get_response(question, eval_mode=True)
         #     data["user_input"].append(response["user_input"])
         #     data["response"].append(response["response"])
         #     data["contexts"].append(response["contexts"])
@@ -101,60 +86,31 @@ def main():
             data = json.load(f)
 
         print("Data has been loaded:")
-        print(data)
+        # print(data)
         dataset = Dataset.from_dict(data)
 
-        # data = {
-        #     "user_input": [
-        #         "What is the capital of France?",
-        #         "Explain the process of photosynthesis."
-        #     ],
-        #     "response": [
-        #         "Paris",
-        #         "Photosynthesis"
-        #     ],
-        #     "ground_truth": [
-        #         "Paris",
-        #         "Photosynthesis"
-        #     ],
-        #     "contexts": [
-        #         ["Paris is the capital of France."],
-        #         ["Photosynthesis is the process by which green plants use sunlight to synthesize foods with the help of chlorophyll."]
-        #     ]
-        # }
+        # ---------------------------------------------------------------
 
-        # # Datasetを作成
-        # dataset = Dataset.from_dict(data)
-
-        # # DEBUG:
-        # print(dataset)
-        # # print(dataset["user_input"])
-        # print()
-        # print(dataset["response"])
-        # print()
-        # # print(dataset["contexts"])
-        # print()
-        # print(dataset["ground_truth"])
-
-        eval_llm = ChatOllama(model="llama3.2", timeout=15000)
+        eval_llm = ChatOllama(model="llama3.2", timeout=60000)
         eval_embeddings = OllamaEmbeddings(model="llama3.2")
 
         # Increase the timeout settings
-        run_config = RunConfig(timeout=300.0, max_workers=2)  # Increase timeout to 120 seconds
+        run_config = RunConfig(timeout=600.0, log_tenacity=True, max_workers=2)  # max_workers=2
 
         # list of mtrics 
-        # metrics = [answer_relevancy, faithfulness, context_precision, context_recall]
-        metrics = [faithfulness]
+        metrics = [answer_relevancy, context_recall]
+        # metrics = [answer_correctness]
 
         results = {}
 
         # Evaluate one by one otherwise I get timeout error
         try:
-            # 各メトリクスをループ処理
+            # iterate each metric
             for metric in metrics:
                 print(f"Evaluating metric: {metric.name}") 
-                
-                # メトリクスを評価
+                logging.info(f"Evaluating metric: {metric.name}")
+
+                # Evaluate metrics
                 result = evaluate(
                     dataset=dataset,
                     metrics=[metric],  
@@ -165,14 +121,16 @@ def main():
 
                 results[metric.name] = result
 
-                # 結果を表示
+                # result
                 print(f"{metric.name} result:", result)
+                logging.info(f"{metric.name} result: {result}") 
 
         except Exception as e:
-            print(f"Evaluation error: {e}")
-
+            print(f"Main loop error: {e}")
+            logging.error(f"Evaluation error: {e}")
 
     except Exception as e:
+        print(f"Main loop error: {e}")
         logging.error(f"Main loop error: {e}")
 
 if __name__ == "__main__":
