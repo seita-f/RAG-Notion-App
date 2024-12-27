@@ -6,7 +6,7 @@ Additionally, I set a restriction on not spending any money during the app devel
 Version | Description
 --- | --- 
 V1.0 | Notion API & RAG Prototype App
-V1.1 | Option for changing tempeature
+V1.1 | Added option for changing tempeature & evaluation
 
 
 # Technologies & Env
@@ -31,11 +31,5 @@ V1.1 | Option for changing tempeature
 **The answer is based on the content in Notion**
 
 # Evaluation
-
-##### Modes:
-
-
-args | Answer Correctness | Answer Relevancy | Context Recall
----  |  --- | --- | --- 
 
 
