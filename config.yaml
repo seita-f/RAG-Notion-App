@@ -6,14 +6,14 @@ notion:
 
 # Embedding settings
 embedding:
-  model: all-mpnet-base-v2  # all-MiniLM-L12-v2, all-mpnet-base-v2
+  model: all-mpnet-base-v2  # all-MiniLM-L12-v2, all-mpnet-base-v2, all-distilroberta-v1 etc
   chunk_size: 1024
   overlap: 100
   db_dir: ./chroma_db 
 
 # LLM settings
 llm:
-  model: google/gemma-2b-it   # google/flan-t5-base, google/gemma-2b-it
+  model: mistralai/Mistral-7B-Instruct-v0.2 # google/gemma-2b-it, mistralai/Mistral-7B-Instruct-v0.2, openai-community/gpt2
   search_type: mmr          
   temperature: 0.4
   k: 4

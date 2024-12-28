@@ -1,5 +1,6 @@
 import sys
 import os
+import yaml
 import streamlit as st
 from streamlit_option_menu import option_menu
 
@@ -20,6 +21,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# load config
+with open('config.yaml') as file:
+    config = yaml.safe_load(file.read())
+
 # Sidebar
 with st.sidebar:
     selected = option_menu(
@@ -32,7 +37,7 @@ with st.sidebar:
 
 # Initialize session state for temperature
 if "temperature" not in st.session_state:
-    st.session_state.temperature = 0.3  # default temperature
+    st.session_state.temperature = config["llm"]["temperature"]  # default temperature
 
 # Chat Layout
 if selected == "Chat":
@@ -74,20 +79,23 @@ if selected == "Chat":
 
     send_button = st.button("Send", key="send_button")
 
+    rag_app = RAGApp(embedding_model=config["embedding"]["model"], llm_model=config["llm"]["model"],
+                                      max_token=config["llm"]["max_token"], temperature=config["llm"]["temperature"])
+
     if send_button and user_input.strip():
         # Spinner
         with st.spinner("Generating response..."):
-
+            
             # DEBUG:
             print(f"##### Passing temp to RAG: {st.session_state.temperature} #####")
 
             # RAGApp
-            rag_app = RAGApp(temperature=st.session_state.temperature)
-            response = rag_app.get_response(user_input)
+            response = rag_app.get_response(user_input, search_type=config["llm"]["search_type"], 
+                                            k=config["llm"]["k"], fetch_k=config["llm"]["fetch_k"], eval_mode=False)
 
         # Update chat history
         st.session_state.chat_history.append({"user": user_input, "bot": response})
-
+        
         # Dispaly the updated convo
         with chat_container:
             st.markdown(f"**You:** {user_input}")
