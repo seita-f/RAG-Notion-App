@@ -12,7 +12,7 @@ V1.1 | Added option for changing tempeature & evaluation
 # Technologies & Env
 - Python 3.11
 - Notion API
-- Gemma (open source LLM)
+- Free LLM API
 - LangChain
 - Streamlit (UI)
 - CPU
@@ -31,5 +31,14 @@ V1.1 | Added option for changing tempeature & evaluation
 **The answer is based on the content in Notion**
 
 # Evaluation
+
+For evaluation, I utilized RAGAS along with the Llama 3 LLM model. The evaluation was conducted using 5 questions paired with their corresponding ground truth answers.
+
+Embedding Model | LLM Model | parameter | Answer Relevancy | Context Recall | Human check
+---  |  --- | --- | --- | --- | ----
+
+
+HuggingFace: https://huggingface.co/models
+
 
 

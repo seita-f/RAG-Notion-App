@@ -1,0 +1,78 @@
+2024-12-28 18:04:17,768 - INFO - config={'notion': {'content_file': 'notion-api/notion_contents.json'}, 'embedding': {'model': 'all-mpnet-base-v2', 'chunk_size': 1024, 'overlap': 100, 'db_dir': './chroma_db'}, 'llm': {'model': 'meta-llama/Llama-3.1-8B-Instruct', 'search_type': 'mmr', 'temperature': 0.4, 'k': 4, 'fetch_k': 20, 'max_token': 1024}, 'evaluation': {'max_workers': 2, 'timeout': 600}}
+2024-12-28 18:04:38,681 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2024-12-28 18:04:39,714 - DEBUG - Creating converter from 7 to 5
+2024-12-28 18:04:39,715 - DEBUG - Creating converter from 5 to 7
+2024-12-28 18:04:39,715 - DEBUG - Creating converter from 7 to 5
+2024-12-28 18:04:39,715 - DEBUG - Creating converter from 5 to 7
+2024-12-28 18:04:41,289 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2024-12-28 18:04:44,349 - DEBUG - matplotlib data path: /Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/matplotlib/mpl-data
+2024-12-28 18:04:44,366 - DEBUG - CONFIGDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 18:04:44,368 - DEBUG - interactive is False
+2024-12-28 18:04:44,368 - DEBUG - platform is darwin
+2024-12-28 18:04:44,485 - DEBUG - CACHEDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 18:04:44,492 - DEBUG - Using fontManager instance from /Users/fujiwaraseita/.matplotlib/fontlist-v390.json
+2024-12-28 18:04:47,877 - INFO - Use pytorch device_name: cpu
+2024-12-28 18:04:47,877 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 18:04:47,902 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-28 18:04:48,110 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:04:48,256 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 18:04:48,411 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 18:04:48,695 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:04:48,862 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 18:04:49,011 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 18:04:49,309 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 18:04:50,339 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 18:04:50,551 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 18:04:50,733 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 18:04:50,806 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-28 18:04:51,130 - DEBUG - Starting component System
+2024-12-28 18:04:51,130 - DEBUG - Starting component Posthog
+2024-12-28 18:04:51,130 - DEBUG - Starting component OpenTelemetryClient
+2024-12-28 18:04:51,130 - DEBUG - Starting component SqliteDB
+2024-12-28 18:04:51,167 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-28 18:04:51,167 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-28 18:04:51,168 - DEBUG - Starting component LocalSegmentManager
+2024-12-28 18:04:51,168 - DEBUG - Starting component LocalExecutor
+2024-12-28 18:04:51,168 - DEBUG - Starting component SegmentAPI
+2024-12-28 18:04:51,182 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-28 18:04:51,696 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-28 18:04:52,585 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 18:04:55,008 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-12-28 18:04:55,128 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-28 18:04:55,275 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-28 18:04:55,286 - INFO - Use pytorch device_name: cpu
+2024-12-28 18:04:55,286 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 18:04:55,424 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:04:55,572 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 18:04:55,863 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 18:04:56,006 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:04:56,153 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 18:04:56,299 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 18:04:56,453 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 18:04:57,399 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 18:04:57,619 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 18:04:57,767 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 18:04:57,782 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-28 18:04:57,947 - WARNING - Number of requested results 20 is greater than number of elements in index 10, updating n_results = 10
+2024-12-28 18:04:57,997 - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-28 18:04:58,373 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 18:04:58,709 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.1-8B-Instruct HTTP/11" 400 135
+2024-12-28 18:04:58,710 - ERROR - Main loop error: (Request ID: 1Z4fnlWJl3rF6evxjLt6u)
+
+Bad request:
+Model requires a Pro subscription; check out hf.co/pricing to learn more. Make sure to include your HF token in your query.
+2024-12-28 18:04:58,713 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:04:58,714 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:04:58,739 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:04:58,739 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:04:58,750 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:04:58,750 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:04:58,761 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:04:58,762 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:04:58,772 - INFO - Evaluating metric: answer_relevancy
+2024-12-28 18:04:58,816 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:04:59,550 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:04:59,551 - ERROR - Evaluation error: Provide dataset!
+2024-12-28 18:04:59,894 - DEBUG - AnalyticsBatcher shutdown complete

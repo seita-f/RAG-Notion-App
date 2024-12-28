@@ -1,0 +1,501 @@
+2024-12-28 18:08:17,051 - INFO - config={'notion': {'content_file': 'notion-api/notion_contents.json'}, 'embedding': {'model': 'all-mpnet-base-v2', 'chunk_size': 1024, 'overlap': 100, 'db_dir': './chroma_db'}, 'llm': {'model': 'openai-community/gpt2', 'search_type': 'mmr', 'temperature': 0.4, 'k': 4, 'fetch_k': 20, 'max_token': 1024}, 'evaluation': {'max_workers': 2, 'timeout': 600}}
+2024-12-28 18:08:47,473 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2024-12-28 18:08:48,555 - DEBUG - Creating converter from 7 to 5
+2024-12-28 18:08:48,556 - DEBUG - Creating converter from 5 to 7
+2024-12-28 18:08:48,557 - DEBUG - Creating converter from 7 to 5
+2024-12-28 18:08:48,557 - DEBUG - Creating converter from 5 to 7
+2024-12-28 18:08:50,298 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2024-12-28 18:08:53,460 - DEBUG - matplotlib data path: /Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/matplotlib/mpl-data
+2024-12-28 18:08:53,476 - DEBUG - CONFIGDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 18:08:53,478 - DEBUG - interactive is False
+2024-12-28 18:08:53,478 - DEBUG - platform is darwin
+2024-12-28 18:08:53,590 - DEBUG - CACHEDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 18:08:53,598 - DEBUG - Using fontManager instance from /Users/fujiwaraseita/.matplotlib/fontlist-v390.json
+2024-12-28 18:08:57,293 - INFO - Use pytorch device_name: cpu
+2024-12-28 18:08:57,293 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 18:08:57,345 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-28 18:08:57,615 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:08:57,888 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 18:08:58,041 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 18:08:58,184 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:08:58,340 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 18:08:58,491 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 18:08:58,637 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 18:08:59,918 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 18:09:00,135 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 18:09:00,321 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 18:09:00,403 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-28 18:09:00,753 - DEBUG - Starting component System
+2024-12-28 18:09:00,753 - DEBUG - Starting component Posthog
+2024-12-28 18:09:00,753 - DEBUG - Starting component OpenTelemetryClient
+2024-12-28 18:09:00,753 - DEBUG - Starting component SqliteDB
+2024-12-28 18:09:00,780 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-28 18:09:00,780 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-28 18:09:00,780 - DEBUG - Starting component LocalSegmentManager
+2024-12-28 18:09:00,780 - DEBUG - Starting component LocalExecutor
+2024-12-28 18:09:00,780 - DEBUG - Starting component SegmentAPI
+2024-12-28 18:09:00,796 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-28 18:09:01,309 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-28 18:09:02,113 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 18:09:04,813 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-12-28 18:09:04,939 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-28 18:09:05,097 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-28 18:09:05,110 - INFO - Use pytorch device_name: cpu
+2024-12-28 18:09:05,110 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 18:09:05,247 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:09:05,389 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 18:09:05,668 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 18:09:05,817 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 18:09:05,975 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 18:09:06,120 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 18:09:06,285 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 18:09:07,410 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 18:09:07,642 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 18:09:07,797 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 18:09:07,812 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-28 18:09:08,027 - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-28 18:09:08,406 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 18:09:29,221 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/openai-community/gpt2 HTTP/11" 200 None
+2024-12-28 18:09:55,024 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/openai-community/gpt2 HTTP/11" 200 None
+2024-12-28 18:10:10,791 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/openai-community/gpt2 HTTP/11" 200 None
+2024-12-28 18:10:30,814 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/openai-community/gpt2 HTTP/11" 200 None
+2024-12-28 18:10:43,973 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/openai-community/gpt2 HTTP/11" 200 None
+2024-12-28 18:10:44,033 - INFO - Time: [21.409327745437622, 25.80323886871338, 15.76866102218628, 20.022454023361206, 13.158933162689209]
+2024-12-28 18:10:44,033 - INFO - Average time: 19.23252296447754 
+2024-12-28 18:10:44,037 - INFO - user_input: ['Why did the villagers avoid the Lake of Stars?', 'What motivated Emma to visit the Lake of Stars?', 'What were the three trials Emma had to overcome?', 'How did the Spirit reward Emma after completing the trials?', "What change occurred in the villagers' perception of the lake after Emma's visits?"]
+2024-12-28 18:10:44,038 - INFO - response: ['The answer:\nThe Lake of Stars is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of great beauty and mystery. It is a place of', "Answer:\nEmma had been thinking about the lake for a long time. She had been thinking about it for a long time. She had been thinking about it for a long time. She had been thinking about it for a long time. She had been thinking about it for a long time.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source of the spirit\\'s power. The lake of stars was the source of the spirit\\'s power.\nQuestion: What did you learn from the lake of stars?\nAnswer:\nEmma had learned that the lake of stars was the true source", 'The answer:\nEmma was the first to die.\nThe second was to be reborn.\nThe third was to be reborn in a new world.\nThe fourth was to be reborn in a new world.\nThe fifth was to be reborn in a new world.\nThe sixth was to be reborn in a new world.\nThe seventh was to be reborn in a new world.\nThe eighth was to be reborn in a new world.\nThe ninth was to be reborn in a new world.\nThe tenth was to be reborn in a new world.\nThe eleventh was to be reborn in a new world.\nThe twelfth was to be reborn in a new world.\nThe thirteenth was to be reborn in a new world.\nThe thirteenth was to be reborn in a new world.\nThe fifteenth was to be reborn in a new world.\nThe sixteenth was to be reborn in a new world.\nThe seventeenth was to be reborn in a new world.\nThe eighteenth was to be reborn in a new world.\nThe nineteenth was to be reborn in a new world.\nThe twentieth was to be reborn in a new world.\nThe twenty-first was to be reborn in a new world.\nThe twenty-second was to be reborn in a new world.\nThe twenty-third was to be reborn in a new world.\nThe twenty-fourth was to be reborn in a new world.\nThe twenty-fifth was to be reborn in a new world.\nThe twenty-six was to be reborn in a new world.\nThe twenty-seven was to be reborn in a new world.\nThe twenty-eight was to be reborn in a new world.\nThe twenty-nine was to be reborn in a new world.\nThe twenty-ten was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.\nThe twenty-th was to be reborn in a new world.', "Emma:\nThe Spirit gave her a gift of a very special kind. She gave her a gift of a very special kind. She gave her a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit's gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift of a very special kind.\nQuestion:\nWhat is the significance of the Spirit\\'s gift of a special kind?\nEmma:\nThe Spirit gave Emma a gift of a very special kind. She gave her a gift", 'Answer:\nThe lake of stars was a bright, beautiful place. The lake of stars was the place where the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the spirit of the']
+2024-12-28 18:10:44,041 - INFO - contexts: [['the secret lake in the forest once upon a time, deep within a forest, there was a mysterious lake called "the lake of stars." at night, the lake\'s surface glowed as if stars were raining down upon it, mesmerizing anyone who caught a glimpse. yet, the villagers never ventured near the lake. legends said a "spirit of the stars" resided there, testing anyone who dared to approach. one day, a young girl named emma from a nearby village heard about the lake and was determined to see its brilliance for herself. late at night, she walked through the forest and finally arrived at the lake of stars. before her lay a scene so enchanting it took her breath away, as if stars had truly descended upon the earth. "so beautiful..." she whispered. just then, a beam of light rose from the water, and the spirit appeared. with a calm voice, the spirit spoke: "traveler, protecting the stars of this lake requires wisdom and courage. if you have such a heart, will you take on my trials?"'], ['emma hesitated briefly but then replied, "i will!" the spirit smiled and gave emma three challenges. the first was to find the "eternal star fragment" hidden at the lake\'s edge. the second was to listen to the animals of the forest and resolve their troubles. the final challenge was to overcome the fear within her heart to see the lake\'s true form. emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value. from then on, the lake of stars shone even brighter, and the villagers quietly admired its radiance. the end.'], ['emma hesitated briefly but then replied, "i will!" the spirit smiled and gave emma three challenges. the first was to find the "eternal star fragment" hidden at the lake\'s edge. the second was to listen to the animals of the forest and resolve their troubles. the final challenge was to overcome the fear within her heart to see the lake\'s true form. emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value. from then on, the lake of stars shone even brighter, and the villagers quietly admired its radiance. the end.'], ['emma hesitated briefly but then replied, "i will!" the spirit smiled and gave emma three challenges. the first was to find the "eternal star fragment" hidden at the lake\'s edge. the second was to listen to the animals of the forest and resolve their troubles. the final challenge was to overcome the fear within her heart to see the lake\'s true form. emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value. from then on, the lake of stars shone even brighter, and the villagers quietly admired its radiance. the end.'], ['emma hesitated briefly but then replied, "i will!" the spirit smiled and gave emma three challenges. the first was to find the "eternal star fragment" hidden at the lake\'s edge. the second was to listen to the animals of the forest and resolve their troubles. the final challenge was to overcome the fear within her heart to see the lake\'s true form. emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value. from then on, the lake of stars shone even brighter, and the villagers quietly admired its radiance. the end.']]
+2024-12-28 18:10:44,041 - INFO - ground truth: ['The villagers believed that the Spirit of the Stars resided there and would test anyone who approached the lake', "Emma was fascinated by the stories of the lake's beauty and wanted to see its brilliance with her own eyes.", "First, finding the 'Eternal Star Fragment' hidden at the lake's edge. Second, helping the forest animals by resolving their troubles. Third, overcoming her inner fears to see the lake's true form.", "The Spirit entrusted the lake's secret to Emma, allowing its starlight to merge with her heart.", "The villagers learned to appreciate the lake's beauty and value, quietly admiring its glow while respecting its sacred nature."]
+2024-12-28 18:10:44,043 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:10:44,043 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:10:44,059 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:10:44,060 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:10:44,073 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:10:44,073 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:10:44,094 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-28 18:10:44,095 - DEBUG - load_verify_locations cafile='/Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-12-28 18:10:44,114 - INFO - Evaluating metric: answer_relevancy
+2024-12-28 18:10:44,223 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:10:44,995 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:10:45,051 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:10:45,051 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:10:45,054 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x173f6ea10>
+2024-12-28 18:10:45,055 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:10:45,057 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x173f6f350>
+2024-12-28 18:10:45,058 - DEBUG - send_request_headers.complete
+2024-12-28 18:10:45,058 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:10:45,058 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:10:45,059 - DEBUG - send_request_body.complete
+2024-12-28 18:10:45,060 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:10:45,060 - DEBUG - send_request_headers.complete
+2024-12-28 18:10:45,060 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:10:45,061 - DEBUG - send_request_body.complete
+2024-12-28 18:10:45,061 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:13:36,609 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:13:36 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:13:36,624 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:13:36,661 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:14:15,986 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:14:15 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:14:15,988 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:14:15,989 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:14:44,993 - DEBUG - receive_response_body.complete
+2024-12-28 18:14:44,995 - DEBUG - response_closed.started
+2024-12-28 18:14:44,996 - DEBUG - response_closed.complete
+2024-12-28 18:14:45,064 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:14:45,067 - DEBUG - send_request_headers.complete
+2024-12-28 18:14:45,067 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:14:45,067 - DEBUG - send_request_body.complete
+2024-12-28 18:14:45,068 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:14:45,734 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:14:45 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:14:45,735 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:14:45,735 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:14:46,027 - DEBUG - receive_response_body.complete
+2024-12-28 18:14:46,027 - DEBUG - response_closed.started
+2024-12-28 18:14:46,027 - DEBUG - response_closed.complete
+2024-12-28 18:14:46,037 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:14:46,037 - DEBUG - send_request_headers.complete
+2024-12-28 18:14:46,037 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:14:46,038 - DEBUG - send_request_body.complete
+2024-12-28 18:14:46,038 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:14:46,883 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:14:46 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:14:46,884 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:14:46,885 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:15:13,561 - DEBUG - receive_response_body.complete
+2024-12-28 18:15:13,562 - DEBUG - response_closed.started
+2024-12-28 18:15:13,563 - DEBUG - response_closed.complete
+2024-12-28 18:15:13,572 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:13,573 - DEBUG - send_request_headers.complete
+2024-12-28 18:15:13,573 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:15:13,574 - DEBUG - send_request_body.complete
+2024-12-28 18:15:13,574 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:14,220 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:15:14 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:15:14,220 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:15:14,221 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:15:18,015 - DEBUG - receive_response_body.complete
+2024-12-28 18:15:18,015 - DEBUG - response_closed.started
+2024-12-28 18:15:18,016 - DEBUG - response_closed.complete
+2024-12-28 18:15:18,026 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:18,027 - DEBUG - send_request_headers.complete
+2024-12-28 18:15:18,027 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:15:18,027 - DEBUG - send_request_body.complete
+2024-12-28 18:15:18,028 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:18,637 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:15:18 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:15:18,637 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:15:18,637 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:15:43,181 - DEBUG - receive_response_body.complete
+2024-12-28 18:15:43,183 - DEBUG - response_closed.started
+2024-12-28 18:15:43,183 - DEBUG - response_closed.complete
+2024-12-28 18:15:43,204 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:15:43,206 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x176dbb2d0>
+2024-12-28 18:15:43,206 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:43,207 - DEBUG - send_request_headers.complete
+2024-12-28 18:15:43,207 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:15:43,208 - DEBUG - send_request_body.complete
+2024-12-28 18:15:43,208 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:46,618 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:15:46 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:15:46,618 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:15:46,618 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:15:46,619 - DEBUG - receive_response_body.complete
+2024-12-28 18:15:46,619 - DEBUG - response_closed.started
+2024-12-28 18:15:46,619 - DEBUG - response_closed.complete
+2024-12-28 18:15:46,627 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:46,627 - DEBUG - send_request_headers.complete
+2024-12-28 18:15:46,627 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:15:46,627 - DEBUG - send_request_body.complete
+2024-12-28 18:15:46,628 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:50,146 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:15:50 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:15:50,147 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:15:50,148 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:15:50,149 - DEBUG - receive_response_body.complete
+2024-12-28 18:15:50,149 - DEBUG - response_closed.started
+2024-12-28 18:15:50,149 - DEBUG - response_closed.complete
+2024-12-28 18:15:50,190 - DEBUG - close.started
+2024-12-28 18:15:50,191 - DEBUG - close.complete
+2024-12-28 18:15:50,191 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:15:50,196 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x174239110>
+2024-12-28 18:15:50,196 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:50,197 - DEBUG - send_request_headers.complete
+2024-12-28 18:15:50,197 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:15:50,197 - DEBUG - send_request_body.complete
+2024-12-28 18:15:50,197 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:50,204 - DEBUG - receive_response_body.complete
+2024-12-28 18:15:50,205 - DEBUG - response_closed.started
+2024-12-28 18:15:50,205 - DEBUG - response_closed.complete
+2024-12-28 18:15:50,208 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:50,208 - DEBUG - send_request_headers.complete
+2024-12-28 18:15:50,208 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:15:50,208 - DEBUG - send_request_body.complete
+2024-12-28 18:15:50,208 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:50,695 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:15:50,696 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:15:50,769 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:15:51,375 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:15:51 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:15:51,376 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:15:51,376 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:15:51,377 - DEBUG - receive_response_body.complete
+2024-12-28 18:15:51,377 - DEBUG - response_closed.started
+2024-12-28 18:15:51,377 - DEBUG - response_closed.complete
+2024-12-28 18:15:51,380 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:51,381 - DEBUG - send_request_headers.complete
+2024-12-28 18:15:51,381 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:15:51,381 - DEBUG - send_request_body.complete
+2024-12-28 18:15:51,382 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:15:51,474 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:17:12,702 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:17:12 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:17:12,704 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:17:12,705 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:17:12,705 - DEBUG - receive_response_body.complete
+2024-12-28 18:17:12,706 - DEBUG - response_closed.started
+2024-12-28 18:17:12,706 - DEBUG - response_closed.complete
+2024-12-28 18:17:12,714 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:17:10 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:17:12,715 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:17:12,716 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:17:12,725 - DEBUG - close.started
+2024-12-28 18:17:12,725 - DEBUG - close.complete
+2024-12-28 18:17:12,727 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:17:12,731 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x174225b50>
+2024-12-28 18:17:12,731 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:17:12,732 - DEBUG - send_request_headers.complete
+2024-12-28 18:17:12,732 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:17:12,733 - DEBUG - send_request_body.complete
+2024-12-28 18:17:12,733 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:17:12,736 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:17:12,736 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:17:12,802 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:17:13,391 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:18:41,798 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:18:41 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:18:41,799 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:18:41,799 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:18:50,770 - DEBUG - receive_response_body.complete
+2024-12-28 18:18:50,771 - DEBUG - response_closed.started
+2024-12-28 18:18:50,772 - DEBUG - response_closed.complete
+2024-12-28 18:18:50,782 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:18:50,783 - DEBUG - send_request_headers.complete
+2024-12-28 18:18:50,783 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:18:50,783 - DEBUG - send_request_body.complete
+2024-12-28 18:18:50,784 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:18:51,407 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:18:51 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:18:51,408 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:18:51,408 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:18:53,072 - DEBUG - receive_response_body.complete
+2024-12-28 18:18:53,074 - DEBUG - response_closed.started
+2024-12-28 18:18:53,074 - DEBUG - response_closed.complete
+2024-12-28 18:18:53,083 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:18:53,084 - DEBUG - send_request_headers.complete
+2024-12-28 18:18:53,084 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:18:53,085 - DEBUG - send_request_body.complete
+2024-12-28 18:18:53,085 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:18:53,752 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:18:53 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:18:53,753 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:18:53,753 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:19:01,636 - DEBUG - receive_response_body.complete
+2024-12-28 18:19:01,637 - DEBUG - response_closed.started
+2024-12-28 18:19:01,637 - DEBUG - response_closed.complete
+2024-12-28 18:19:01,646 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:01,647 - DEBUG - send_request_headers.complete
+2024-12-28 18:19:01,647 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:19:01,648 - DEBUG - send_request_body.complete
+2024-12-28 18:19:01,648 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:02,274 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:19:02 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:19:02,274 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:19:02,274 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:19:05,132 - DEBUG - receive_response_body.complete
+2024-12-28 18:19:05,133 - DEBUG - response_closed.started
+2024-12-28 18:19:05,134 - DEBUG - response_closed.complete
+2024-12-28 18:19:05,142 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:05,142 - DEBUG - send_request_headers.complete
+2024-12-28 18:19:05,142 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:19:05,143 - DEBUG - send_request_body.complete
+2024-12-28 18:19:05,143 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:05,756 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:19:05 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:19:05,757 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:19:05,757 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:19:12,404 - DEBUG - receive_response_body.complete
+2024-12-28 18:19:12,404 - DEBUG - response_closed.started
+2024-12-28 18:19:12,404 - DEBUG - response_closed.complete
+2024-12-28 18:19:12,409 - DEBUG - close.started
+2024-12-28 18:19:12,409 - DEBUG - close.complete
+2024-12-28 18:19:12,410 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:19:12,410 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x17420b0d0>
+2024-12-28 18:19:12,411 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:12,411 - DEBUG - send_request_headers.complete
+2024-12-28 18:19:12,411 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:19:12,412 - DEBUG - send_request_body.complete
+2024-12-28 18:19:12,412 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:14,151 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:19:14 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:19:14,152 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:19:14,152 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:19:14,153 - DEBUG - receive_response_body.complete
+2024-12-28 18:19:14,153 - DEBUG - response_closed.started
+2024-12-28 18:19:14,153 - DEBUG - response_closed.complete
+2024-12-28 18:19:14,157 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:14,158 - DEBUG - send_request_headers.complete
+2024-12-28 18:19:14,158 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:19:14,158 - DEBUG - send_request_body.complete
+2024-12-28 18:19:14,158 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:19,324 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:19:19 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:19:19,325 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:19:19,326 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:19:19,327 - DEBUG - receive_response_body.complete
+2024-12-28 18:19:19,327 - DEBUG - response_closed.started
+2024-12-28 18:19:19,327 - DEBUG - response_closed.complete
+2024-12-28 18:19:19,343 - DEBUG - close.started
+2024-12-28 18:19:19,344 - DEBUG - close.complete
+2024-12-28 18:19:19,344 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:19:19,347 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x174225ed0>
+2024-12-28 18:19:19,348 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:19,348 - DEBUG - send_request_headers.complete
+2024-12-28 18:19:19,349 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:19:19,350 - DEBUG - send_request_body.complete
+2024-12-28 18:19:19,350 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:19:19,760 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:19:19,760 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:19:19,827 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:19:20,365 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:20:59,522 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:20:59 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:20:59,529 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:20:59,532 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:21:01,911 - DEBUG - receive_response_body.complete
+2024-12-28 18:21:01,912 - DEBUG - response_closed.started
+2024-12-28 18:21:01,913 - DEBUG - response_closed.complete
+2024-12-28 18:21:01,934 - DEBUG - close.started
+2024-12-28 18:21:01,935 - DEBUG - close.complete
+2024-12-28 18:21:01,935 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:21:01,936 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x174239590>
+2024-12-28 18:21:01,937 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:01,937 - DEBUG - send_request_headers.complete
+2024-12-28 18:21:01,937 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:21:01,938 - DEBUG - send_request_body.complete
+2024-12-28 18:21:01,938 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:03,892 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:21:03 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:21:03,894 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:21:03,894 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:21:03,895 - DEBUG - receive_response_body.complete
+2024-12-28 18:21:03,895 - DEBUG - response_closed.started
+2024-12-28 18:21:03,895 - DEBUG - response_closed.complete
+2024-12-28 18:21:03,899 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:03,900 - DEBUG - send_request_headers.complete
+2024-12-28 18:21:03,900 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:21:03,900 - DEBUG - send_request_body.complete
+2024-12-28 18:21:03,901 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:09,789 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:21:09 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:21:09,789 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:21:09,790 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:21:09,791 - DEBUG - receive_response_body.complete
+2024-12-28 18:21:09,791 - DEBUG - response_closed.started
+2024-12-28 18:21:09,792 - DEBUG - response_closed.complete
+2024-12-28 18:21:09,821 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:21:09,827 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:21:09,890 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:21:10,547 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:21:21,779 - DEBUG - receive_response_body.complete
+2024-12-28 18:21:21,779 - DEBUG - response_closed.started
+2024-12-28 18:21:21,780 - DEBUG - response_closed.complete
+2024-12-28 18:21:21,780 - DEBUG - close.started
+2024-12-28 18:21:21,780 - DEBUG - close.complete
+2024-12-28 18:21:21,792 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:21,792 - DEBUG - send_request_headers.complete
+2024-12-28 18:21:21,792 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:21:21,793 - DEBUG - send_request_body.complete
+2024-12-28 18:21:21,793 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:22,000 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:21:21 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:21:22,000 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:21:22,000 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:21:44,347 - DEBUG - receive_response_body.complete
+2024-12-28 18:21:44,348 - DEBUG - response_closed.started
+2024-12-28 18:21:44,348 - DEBUG - response_closed.complete
+2024-12-28 18:21:44,354 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:44,355 - DEBUG - send_request_headers.complete
+2024-12-28 18:21:44,355 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:21:44,355 - DEBUG - send_request_body.complete
+2024-12-28 18:21:44,356 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:21:44,705 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:21:44 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:21:44,706 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:21:44,706 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:22:07,309 - DEBUG - receive_response_body.complete
+2024-12-28 18:22:07,310 - DEBUG - response_closed.started
+2024-12-28 18:22:07,310 - DEBUG - response_closed.complete
+2024-12-28 18:22:07,312 - DEBUG - close.started
+2024-12-28 18:22:07,313 - DEBUG - close.complete
+2024-12-28 18:22:07,313 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:22:07,313 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x174209c10>
+2024-12-28 18:22:07,313 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:22:07,313 - DEBUG - send_request_headers.complete
+2024-12-28 18:22:07,314 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:22:07,314 - DEBUG - send_request_body.complete
+2024-12-28 18:22:07,314 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:22:09,311 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:22:09 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:22:09,311 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:22:09,311 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:22:09,312 - DEBUG - receive_response_body.complete
+2024-12-28 18:22:09,312 - DEBUG - response_closed.started
+2024-12-28 18:22:09,312 - DEBUG - response_closed.complete
+2024-12-28 18:22:09,313 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:22:09,314 - DEBUG - send_request_headers.complete
+2024-12-28 18:22:09,314 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:22:09,314 - DEBUG - send_request_body.complete
+2024-12-28 18:22:09,314 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:22:12,121 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 28 Dec 2024 17:22:12 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:22:12,121 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2024-12-28 18:22:12,122 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:22:12,122 - DEBUG - receive_response_body.complete
+2024-12-28 18:22:12,122 - DEBUG - response_closed.started
+2024-12-28 18:22:12,122 - DEBUG - response_closed.complete
+2024-12-28 18:22:12,139 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:22:12,139 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:22:12,144 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:22:12,805 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:22:12,816 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:22:13,017 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:22:13,018 - INFO - answer_relevancy result: {'answer_relevancy': 0.3485}
+2024-12-28 18:22:13,019 - INFO - Evaluating metric: context_recall
+2024-12-28 18:22:13,024 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:22:13,228 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:22:13,324 - DEBUG - close.started
+2024-12-28 18:22:13,325 - DEBUG - close.complete
+2024-12-28 18:22:13,325 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:22:13,325 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2024-12-28 18:22:13,327 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1741ff3d0>
+2024-12-28 18:22:13,328 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:22:13,328 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1741ff990>
+2024-12-28 18:22:13,328 - DEBUG - send_request_headers.complete
+2024-12-28 18:22:13,329 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:22:13,329 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:22:13,329 - DEBUG - send_request_body.complete
+2024-12-28 18:22:13,329 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:22:13,329 - DEBUG - send_request_headers.complete
+2024-12-28 18:22:13,329 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:22:13,330 - DEBUG - send_request_body.complete
+2024-12-28 18:22:13,330 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:25:58,314 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:25:58 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:25:58,322 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:25:58,324 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:26:02,736 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:26:02 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:26:02,737 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:26:02,737 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:27:09,283 - DEBUG - receive_response_body.complete
+2024-12-28 18:27:09,284 - DEBUG - response_closed.started
+2024-12-28 18:27:09,285 - DEBUG - response_closed.complete
+2024-12-28 18:27:09,335 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:27:09,336 - DEBUG - send_request_headers.complete
+2024-12-28 18:27:09,337 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:27:09,337 - DEBUG - send_request_body.complete
+2024-12-28 18:27:09,338 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:27:10,256 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:27:10,256 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:27:10,325 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:27:10,990 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:27:44,395 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:27:44 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:27:44,395 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:27:44,395 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:30:11,164 - DEBUG - receive_response_body.complete
+2024-12-28 18:30:11,169 - DEBUG - response_closed.started
+2024-12-28 18:30:11,170 - DEBUG - response_closed.complete
+2024-12-28 18:30:11,214 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:30:11,216 - DEBUG - send_request_headers.complete
+2024-12-28 18:30:11,216 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:30:11,217 - DEBUG - send_request_body.complete
+2024-12-28 18:30:11,217 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:30:11,900 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:30:11,901 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:30:11,992 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:30:12,644 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:30:46,957 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:30:46 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:30:46,959 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:30:46,960 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:32:12,625 - DEBUG - receive_response_body.complete
+2024-12-28 18:32:12,626 - DEBUG - response_closed.started
+2024-12-28 18:32:12,627 - DEBUG - response_closed.complete
+2024-12-28 18:32:12,637 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-28 18:32:12,637 - DEBUG - send_request_headers.complete
+2024-12-28 18:32:12,638 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-28 18:32:12,638 - DEBUG - send_request_body.complete
+2024-12-28 18:32:12,638 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-28 18:32:13,236 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:32:13,237 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:32:13,283 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:32:13,883 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:32:48,653 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Sat, 28 Dec 2024 17:32:48 GMT'), (b'Transfer-Encoding', b'chunked')])
+2024-12-28 18:32:48,653 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-12-28 18:32:48,653 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-28 18:34:01,508 - DEBUG - receive_response_body.complete
+2024-12-28 18:34:01,509 - DEBUG - response_closed.started
+2024-12-28 18:34:01,510 - DEBUG - response_closed.complete
+2024-12-28 18:34:02,285 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:34:02,285 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:34:02,373 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:34:02,937 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:34:15,080 - DEBUG - receive_response_body.complete
+2024-12-28 18:34:15,081 - DEBUG - response_closed.started
+2024-12-28 18:34:15,081 - DEBUG - response_closed.complete
+2024-12-28 18:34:15,081 - DEBUG - close.started
+2024-12-28 18:34:15,082 - DEBUG - close.complete
+2024-12-28 18:34:15,086 - DEBUG - Flushing triggered for 1 events
+2024-12-28 18:34:15,086 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 18:34:15,092 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:34:15,464 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:34:15,471 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 18:34:15,676 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 18:34:15,677 - INFO - context_recall result: {'context_recall': 0.7733}
+2024-12-28 18:34:16,164 - DEBUG - AnalyticsBatcher shutdown complete
