@@ -35,6 +35,8 @@ For evaluation, I utilized RAGAS along with the Llama 3 LLM model. The evaluatio
 
 Embedding Model | LLM Model | parameter | Answer Relevancy | Context Recall | Human check
 ---  |  --- | --- | --- | --- | ----
+all-mpnet-base-v2 | google/gemma-2b-it | chunk_size: 1024 | 0.6279 | 0.7578 | 4/5
+all-mpnet-base-v2 | google/gemma-2b-it | chunk_size: 512 | 0.1460 | 0.6000 | 2/5
 
 
 HuggingFace: https://huggingface.co/models
