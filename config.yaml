@@ -1,0 +1,27 @@
+# API -> .env
+
+# Notion
+notion:
+  content_file: "notion-api/notion_contents.json"
+
+# Embedding settings
+embedding:
+  model: all-mpnet-base-v2  # all-MiniLM-L12-v2, all-mpnet-base-v2
+  chunk_size: 1024
+  overlap: 100
+  db_dir: ./chroma_db 
+
+# LLM settings
+llm:
+  model: google/gemma-2b-it   # google/flan-t5-base, google/gemma-2b-it
+  search_type: mmr          
+  temperature: 0.4
+  k: 4
+  fetch_k: 20
+  max_token: 1024
+
+# Evaluation LLM settings
+evaluation:
+  max_workers: 2  # the best for my PC spec
+  timeout: 600
+

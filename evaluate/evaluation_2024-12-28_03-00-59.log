@@ -1,0 +1,193 @@
+2024-12-28 03:00:59,974 - INFO - config={'notion': {'content_file': 'notion-api/notion_contents.json'}, 'embedding': {'model': 'all-mpnet-base-v2', 'chunk_size': 512, 'overlap': 100, 'db_dir': './chroma_db'}, 'llm': {'model': 'google/gemma-2b-it', 'search_type': 'mmr', 'temperature': 0.4, 'k': 4, 'fetch_k': 20}, 'evaluation': {'max_workers': 2, 'timeout': 600}}
+2024-12-28 03:01:26,143 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2024-12-28 03:01:27,264 - DEBUG - Creating converter from 7 to 5
+2024-12-28 03:01:27,265 - DEBUG - Creating converter from 5 to 7
+2024-12-28 03:01:27,265 - DEBUG - Creating converter from 7 to 5
+2024-12-28 03:01:27,265 - DEBUG - Creating converter from 5 to 7
+2024-12-28 03:01:28,844 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2024-12-28 03:01:32,229 - DEBUG - matplotlib data path: /Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/matplotlib/mpl-data
+2024-12-28 03:01:32,247 - DEBUG - CONFIGDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 03:01:32,249 - DEBUG - interactive is False
+2024-12-28 03:01:32,249 - DEBUG - platform is darwin
+2024-12-28 03:01:32,388 - DEBUG - CACHEDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 03:01:32,396 - DEBUG - Using fontManager instance from /Users/fujiwaraseita/.matplotlib/fontlist-v390.json
+2024-12-28 03:01:35,853 - INFO - Use pytorch device_name: cpu
+2024-12-28 03:01:35,853 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 03:01:35,878 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-28 03:01:36,078 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 03:01:36,750 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 03:01:36,891 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 03:01:37,067 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 03:01:37,671 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 03:01:37,816 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 03:01:37,966 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 03:01:39,602 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 03:01:40,641 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 03:01:40,823 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 03:01:42,107 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-28 03:01:42,435 - DEBUG - Starting component System
+2024-12-28 03:01:42,435 - DEBUG - Starting component Posthog
+2024-12-28 03:01:42,435 - DEBUG - Starting component OpenTelemetryClient
+2024-12-28 03:01:42,435 - DEBUG - Starting component SqliteDB
+2024-12-28 03:01:42,475 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-28 03:01:42,475 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-28 03:01:42,475 - DEBUG - Starting component LocalSegmentManager
+2024-12-28 03:01:42,475 - DEBUG - Starting component LocalExecutor
+2024-12-28 03:01:42,475 - DEBUG - Starting component SegmentAPI
+2024-12-28 03:01:42,493 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-28 03:01:43,012 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-28 03:01:43,893 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 03:01:46,690 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-12-28 03:01:46,840 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-28 03:01:46,987 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-28 03:01:46,998 - INFO - Use pytorch device_name: cpu
+2024-12-28 03:01:46,998 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 03:01:47,399 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 03:01:47,545 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 03:01:47,715 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 03:01:48,012 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 03:01:48,164 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 03:01:48,312 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 03:01:48,451 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 03:01:48,690 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 03:01:48,903 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 03:01:49,053 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 03:01:49,071 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-28 03:01:49,244 - WARNING - Number of requested results 20 is greater than number of elements in index 17, updating n_results = 17
+2024-12-28 03:01:49,253 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:01:49,257 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:01:49,257 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:01:49,259 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:01:49,337 - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-28 03:01:49,621 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 03:01:50,159 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 503 93
+2024-12-28 03:03:16,394 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 03:03:16,466 - WARNING - Number of requested results 20 is greater than number of elements in index 17, updating n_results = 17
+2024-12-28 03:03:16,470 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:16,470 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:16,471 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:16,471 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:16,673 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 171
+2024-12-28 03:03:16,750 - WARNING - Number of requested results 20 is greater than number of elements in index 17, updating n_results = 17
+2024-12-28 03:03:16,756 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:16,756 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:16,756 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:16,757 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:23,976 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 03:03:24,057 - WARNING - Number of requested results 20 is greater than number of elements in index 17, updating n_results = 17
+2024-12-28 03:03:24,061 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:24,061 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:24,062 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:24,062 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:30,674 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 03:03:30,767 - WARNING - Number of requested results 20 is greater than number of elements in index 17, updating n_results = 17
+2024-12-28 03:03:30,771 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:30,771 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:30,772 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:30,772 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 03:03:39,443 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 03:03:39,501 - INFO - Time: [87.3253870010376, 0.2768990993499756, 7.303351163864136, 6.699819087982178, 8.768224000930786]
+2024-12-28 03:03:39,501 - INFO - Average time: 22.074736070632934 
+2024-12-28 03:03:39,505 - INFO - user_input: ['Why did the villagers avoid the Lake of Stars?', 'What motivated Emma to visit the Lake of Stars?', 'What were the three trials Emma had to overcome?', 'How did the Spirit reward Emma after completing the trials?', "What change occurred in the villagers' perception of the lake after Emma's visits?"]
+2024-12-28 03:03:39,505 - INFO - response: ['Answer: The passage does not specify why the villagers avoided the Lake of Stars, so I cannot answer this question from the provided context.', "According to the context, Emma frequently visited the Lake of Stars to protect its glow and teach the villagers about the forest's beauty and value.", 'The context does not specify the three trials Emma had to overcome, so I cannot answer this question from the context.', 'The passage does not specify how the Spirit rewarded Emma, so I cannot answer this question from the context.', "The passage does not specify any changes in the villagers' perception of the lake, so I cannot answer this question from the provided context."]
+2024-12-28 03:03:39,507 - INFO - contexts: [['the secret lake in the forest once upon a time, deep within a forest, there was a mysterious lake called "the lake of stars." at night, the lake\'s surface glowed as if stars were raining down upon it, mesmerizing anyone who caught a glimpse. yet, the villagers never ventured near the lake. legends said a "spirit of the stars" resided there, testing anyone who dared to approach.'], ['emma hesitated briefly but then replied, "i will!" the spirit smiled and gave emma three challenges. the first was to find the "eternal star fragment" hidden at the lake\'s edge. the second was to listen to the animals of the forest and resolve their troubles. the final challenge was to overcome the fear within her heart to see the lake\'s true form. emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value. from then on, the lake of stars shone even brighter, and the villagers quietly admired its radiance. the end.'], ['emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value.'], ['emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value.'], ['emma faced many difficulties but overcame each trial with determination. at last, she returned to the spirit, who looked pleased. "your wisdom, courage, and kindness are worthy of this lake. i entrust its secret to you." at that moment, the lake\'s water rose high into the sky, merging with the starlight before flowing into emma\'s heart. from that day forward, emma frequently visited the lake, protecting its glow and teaching the villagers about the forest\'s beauty and value.']]
+2024-12-28 03:03:39,508 - INFO - ground truth: ['The villagers believed that the Spirit of the Stars resided there and would test anyone who approached the lake', "Emma was fascinated by the stories of the lake's beauty and wanted to see its brilliance with her own eyes.", "First, finding the 'Eternal Star Fragment' hidden at the lake's edge. Second, helping the forest animals by resolving their troubles. Third, overcoming her inner fears to see the lake's true form.", "The Spirit entrusted the lake's secret to Emma, allowing its starlight to merge with her heart.", "The villagers learned to appreciate the lake's beauty and value, quietly admiring its glow while respecting its sacred nature."]
+2024-12-28 03:03:39,511 - INFO - Evaluating metric: answer_relevancy
+2024-12-28 03:03:39,609 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:03:40,057 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:05:39,199 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:05:41,531 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:05:41,538 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:05:43,818 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:05:43,822 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:05:46,083 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:05:46,088 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:05:48,002 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:05:48,790 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:05:48,791 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:05:48,867 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:05:49,213 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:06:32,018 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:06:33,726 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:06:33,732 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:06:35,478 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:06:35,484 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:06:37,292 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:06:37,299 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:06:39,054 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:06:39,375 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:06:39,375 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:06:39,378 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:06:39,870 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:07:51,329 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:07:53,054 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:07:53,060 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:07:54,987 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:07:54,992 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:07:56,925 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:07:56,929 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:07:58,930 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:07:59,098 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:07:59,098 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:07:59,160 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:07:59,620 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:08:54,872 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:08:56,587 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:08:56,593 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:08:58,024 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:08:58,030 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:08:59,536 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:08:59,542 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:09:00,979 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:09:01,851 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:09:01,851 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:09:01,855 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:09:02,177 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:09:10,798 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:09:12,601 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:09:12,605 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:09:14,405 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:09:14,409 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:09:16,218 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:09:16,221 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 03:09:18,027 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 03:09:18,035 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:09:18,035 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:09:18,107 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:09:18,230 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:09:18,230 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:09:18,235 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:09:18,444 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:09:18,450 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:09:18,532 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:09:18,625 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:09:18,627 - INFO - answer_relevancy result: {'answer_relevancy': 0.0000}
+2024-12-28 03:09:18,627 - INFO - Evaluating metric: context_recall
+2024-12-28 03:09:18,630 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:09:18,804 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:13:47,648 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:13:47,651 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:13:47,706 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:13:48,204 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:14:56,490 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:14:56,491 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:14:56,497 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:14:56,912 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:16:12,280 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:16:12,282 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:16:12,331 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:16:12,790 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:16:37,910 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:16:37,912 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:16:37,917 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:16:38,219 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:17:27,534 - DEBUG - Flushing triggered for 1 events
+2024-12-28 03:17:27,536 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 03:17:27,542 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:17:28,053 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:17:28,057 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 03:17:28,239 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 03:17:28,241 - INFO - context_recall result: {'context_recall': 0.7067}
+2024-12-28 03:17:28,379 - DEBUG - AnalyticsBatcher shutdown complete

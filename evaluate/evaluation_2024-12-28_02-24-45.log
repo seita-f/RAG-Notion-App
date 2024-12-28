@@ -1,0 +1,192 @@
+2024-12-28 02:24:45,340 - INFO - config={'notion': {'content_file': 'notion-api/notion_contents.json'}, 'embedding': {'model': 'all-mpnet-base-v2', 'chunk_size': 1024, 'overlap': 100, 'db_dir': './chroma_db'}, 'llm': {'model': 'google/gemma-2b-it', 'search_type': 'mmr', 'temperature': 0.4, 'k': 4, 'fetch_k': 20}, 'evaluation': {'max_workers': 2, 'timeout': 600}}
+2024-12-28 02:25:03,693 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2024-12-28 02:25:04,507 - DEBUG - Creating converter from 7 to 5
+2024-12-28 02:25:04,508 - DEBUG - Creating converter from 5 to 7
+2024-12-28 02:25:04,508 - DEBUG - Creating converter from 7 to 5
+2024-12-28 02:25:04,508 - DEBUG - Creating converter from 5 to 7
+2024-12-28 02:25:05,419 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2024-12-28 02:25:08,302 - DEBUG - matplotlib data path: /Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/matplotlib/mpl-data
+2024-12-28 02:25:08,318 - DEBUG - CONFIGDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 02:25:08,320 - DEBUG - interactive is False
+2024-12-28 02:25:08,320 - DEBUG - platform is darwin
+2024-12-28 02:25:08,434 - DEBUG - CACHEDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-28 02:25:08,440 - DEBUG - Using fontManager instance from /Users/fujiwaraseita/.matplotlib/fontlist-v390.json
+2024-12-28 02:25:11,720 - INFO - Use pytorch device_name: cpu
+2024-12-28 02:25:11,720 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 02:25:11,787 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-28 02:25:12,013 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 02:25:12,156 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 02:25:12,313 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 02:25:12,590 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 02:25:12,735 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 02:25:12,881 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 02:25:13,026 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 02:25:14,376 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 02:25:14,611 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 02:25:14,799 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 02:25:15,978 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-28 02:25:16,293 - DEBUG - Starting component System
+2024-12-28 02:25:16,294 - DEBUG - Starting component Posthog
+2024-12-28 02:25:16,294 - DEBUG - Starting component OpenTelemetryClient
+2024-12-28 02:25:16,294 - DEBUG - Starting component SqliteDB
+2024-12-28 02:25:16,488 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-28 02:25:16,488 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-28 02:25:16,488 - DEBUG - Starting component LocalSegmentManager
+2024-12-28 02:25:16,488 - DEBUG - Starting component LocalExecutor
+2024-12-28 02:25:16,488 - DEBUG - Starting component SegmentAPI
+2024-12-28 02:25:17,020 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-28 02:25:17,883 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 02:25:20,863 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-12-28 02:25:20,946 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-28 02:25:21,092 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-28 02:25:21,105 - INFO - Use pytorch device_name: cpu
+2024-12-28 02:25:21,105 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-28 02:25:21,282 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 02:25:21,435 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-28 02:25:21,583 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-28 02:25:21,729 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-28 02:25:21,878 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-28 02:25:22,065 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-28 02:25:22,209 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-28 02:25:22,526 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-28 02:25:22,728 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6733
+2024-12-28 02:25:22,883 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6733
+2024-12-28 02:25:22,905 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-28 02:25:23,081 - WARNING - Number of requested results 20 is greater than number of elements in index 5, updating n_results = 5
+2024-12-28 02:25:23,087 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:23,088 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:23,088 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:23,089 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:23,139 - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-28 02:25:23,205 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 02:25:24,059 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-28 02:25:34,195 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 02:25:34,267 - WARNING - Number of requested results 20 is greater than number of elements in index 5, updating n_results = 5
+2024-12-28 02:25:34,271 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:34,271 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:34,272 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:34,272 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:45,357 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 02:25:45,427 - WARNING - Number of requested results 20 is greater than number of elements in index 5, updating n_results = 5
+2024-12-28 02:25:45,430 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:45,431 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:45,431 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:25:45,431 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:06,451 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 02:26:06,524 - WARNING - Number of requested results 20 is greater than number of elements in index 5, updating n_results = 5
+2024-12-28 02:26:06,527 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:06,528 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:06,528 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:06,528 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:16,817 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 02:26:17,108 - WARNING - Number of requested results 20 is greater than number of elements in index 5, updating n_results = 5
+2024-12-28 02:26:17,113 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:17,113 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:17,114 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:17,116 - DEBUG - Unable to import simsimd, defaulting to NumPy implementation. If you want to use simsimd please install with `pip install simsimd`.
+2024-12-28 02:26:26,319 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-28 02:26:26,391 - INFO - Time: [11.291154146194458, 11.161688089370728, 21.093169927597046, 10.367929220199585, 9.49972677230835]
+2024-12-28 02:26:26,391 - INFO - Average time: 12.682733631134033 
+2024-12-28 02:26:26,391 - INFO - data: Dataset({
+    features: ['user_input', 'response', 'ground_truth', 'contexts'],
+    num_rows: 5
+})
+2024-12-28 02:26:26,395 - INFO - Evaluating metric: answer_relevancy
+2024-12-28 02:26:26,460 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:26:26,932 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:28:33,241 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:28:34,973 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:28:34,982 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:28:37,631 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:28:37,638 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:28:40,364 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:28:40,371 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:28:42,700 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:28:43,558 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:28:43,559 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:28:43,613 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:28:44,143 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:29:49,611 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:29:51,539 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:29:51,548 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:29:53,504 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:29:53,509 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:29:55,393 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:29:55,398 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:29:57,257 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:29:57,371 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:29:57,371 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:29:57,376 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:29:57,695 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:31:07,619 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:31:09,256 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:31:09,263 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:31:10,967 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:31:10,972 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:31:12,731 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:31:12,738 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:31:14,431 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:31:14,987 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:31:14,987 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:31:15,028 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:31:15,591 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:31:59,546 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:01,522 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:01,528 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:03,529 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:03,534 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:05,475 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:05,480 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:07,542 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:07,708 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:32:07,708 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:32:07,714 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:32:08,015 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:32:20,719 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:22,420 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:22,424 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:24,006 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:24,010 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:25,529 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:25,532 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-28 02:32:27,050 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-28 02:32:27,059 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:32:27,059 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:32:27,063 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:32:27,079 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:32:27,080 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:32:27,085 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:32:27,476 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:32:27,482 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:32:27,605 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:32:27,658 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:32:27,659 - INFO - answer_relevancy result: {'answer_relevancy': 0.6279}
+2024-12-28 02:32:27,660 - INFO - Evaluating metric: context_recall
+2024-12-28 02:32:27,665 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:32:27,847 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:38:57,827 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:38:57,830 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:38:57,887 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:38:58,432 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:40:22,793 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:40:22,803 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:40:22,858 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:40:23,320 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:43:50,188 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:43:50,190 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:43:50,266 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:43:50,780 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:45:45,122 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:45:45,124 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:45:45,240 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:45:45,773 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:45:57,261 - DEBUG - Flushing triggered for 1 events
+2024-12-28 02:45:57,262 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-28 02:45:57,267 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:45:57,730 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:45:57,736 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-28 02:45:57,961 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-28 02:45:57,962 - INFO - context_recall result: {'context_recall': 0.7578}
+2024-12-28 02:45:58,399 - DEBUG - AnalyticsBatcher shutdown complete
