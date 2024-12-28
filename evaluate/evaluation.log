@@ -1,0 +1,375 @@
+2024-12-26 23:56:24,604 - INFO - Evaluating metric: answer_correctness
+2024-12-26 23:56:24,653 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-26 23:56:25,197 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-26 23:56:25,203 - ERROR - Evaluation error: 1 validation error for SingleTurnSample
+retrieved_contexts
+  Input should be a valid list [type=list_type, input_value='periodic energy waves sw...nt intelligent species.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/list_type
+2024-12-26 23:56:25,204 - DEBUG - AnalyticsBatcher shutdown complete
+2024-12-27 00:01:10,475 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:01:10,537 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-27 00:01:10,749 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:01:43,293 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2024-12-27 00:01:44,379 - DEBUG - Creating converter from 7 to 5
+2024-12-27 00:01:44,380 - DEBUG - Creating converter from 5 to 7
+2024-12-27 00:01:44,380 - DEBUG - Creating converter from 7 to 5
+2024-12-27 00:01:44,380 - DEBUG - Creating converter from 5 to 7
+2024-12-27 00:01:46,294 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2024-12-27 00:01:49,436 - DEBUG - matplotlib data path: /Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/matplotlib/mpl-data
+2024-12-27 00:01:49,456 - DEBUG - CONFIGDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-27 00:01:49,458 - DEBUG - interactive is False
+2024-12-27 00:01:49,459 - DEBUG - platform is darwin
+2024-12-27 00:01:49,581 - DEBUG - CACHEDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-27 00:01:49,589 - DEBUG - Using fontManager instance from /Users/fujiwaraseita/.matplotlib/fontlist-v390.json
+2024-12-27 00:01:53,339 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:01:53,339 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:01:53,494 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:01:54,258 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:01:54,402 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:01:54,817 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:01:54,962 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:01:55,121 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:01:55,262 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:01:56,623 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:01:56,880 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:01:57,276 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:01:57,360 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-27 00:01:57,698 - DEBUG - Starting component System
+2024-12-27 00:01:57,698 - DEBUG - Starting component Posthog
+2024-12-27 00:01:57,699 - DEBUG - Starting component OpenTelemetryClient
+2024-12-27 00:01:57,700 - DEBUG - Starting component SqliteDB
+2024-12-27 00:01:57,723 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-27 00:01:57,724 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-27 00:01:57,724 - DEBUG - Starting component LocalSegmentManager
+2024-12-27 00:01:57,724 - DEBUG - Starting component LocalExecutor
+2024-12-27 00:01:57,724 - DEBUG - Starting component SegmentAPI
+2024-12-27 00:01:57,740 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:01:58,252 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-27 00:01:58,997 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:01:59,719 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-12-27 00:02:00,050 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:02:00,129 - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-27 00:02:00,257 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:02:00,846 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 503 93
+2024-12-27 00:03:28,410 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:03:28,419 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:03:28,604 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:03:28,621 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:03:28,621 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:03:28,763 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:03:29,125 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:03:29,268 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:03:29,417 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:03:29,558 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:03:29,701 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:03:29,844 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:03:30,253 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:03:30,471 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:03:30,627 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:03:30,647 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:03:30,833 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:03:31,011 - DEBUG - Resetting dropped connection: us.i.posthog.com
+2024-12-27 00:03:31,895 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:03:39,368 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:03:39,370 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:03:39,506 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:03:39,518 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:03:39,518 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:03:39,672 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:03:39,817 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:03:39,961 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:03:40,103 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:03:40,255 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:03:40,491 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:03:40,644 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:03:40,889 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:03:41,209 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:03:41,377 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:03:41,392 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:03:41,565 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:03:41,687 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:03:48,890 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:03:48,892 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:03:49,038 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:03:49,047 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:03:49,047 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:03:49,185 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:03:49,326 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:03:49,465 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:03:49,603 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:03:49,913 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:03:50,059 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:03:50,200 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:03:50,433 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:03:50,835 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:03:51,023 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:03:51,040 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:03:51,233 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:03:51,479 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:03:59,334 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:03:59,338 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:03:59,520 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:03:59,534 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:03:59,534 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:03:59,675 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:03:59,947 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:04:00,088 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:04:00,232 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:04:00,377 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:04:00,529 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:04:00,682 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:04:00,974 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:04:01,211 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:04:01,376 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:04:01,395 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:04:01,729 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:04:02,626 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:04:10,495 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:04:10,784 - DEBUG - AnalyticsBatcher shutdown complete
+2024-12-27 00:07:57,711 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:07:57,742 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-27 00:07:57,938 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:08:32,538 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2024-12-27 00:08:33,583 - DEBUG - Creating converter from 7 to 5
+2024-12-27 00:08:33,584 - DEBUG - Creating converter from 5 to 7
+2024-12-27 00:08:33,584 - DEBUG - Creating converter from 7 to 5
+2024-12-27 00:08:33,584 - DEBUG - Creating converter from 5 to 7
+2024-12-27 00:08:35,319 - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2024-12-27 00:08:38,562 - DEBUG - matplotlib data path: /Users/fujiwaraseita/.pyenv/versions/3.11.0/lib/python3.11/site-packages/matplotlib/mpl-data
+2024-12-27 00:08:38,574 - DEBUG - CONFIGDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-27 00:08:38,579 - DEBUG - interactive is False
+2024-12-27 00:08:38,581 - DEBUG - platform is darwin
+2024-12-27 00:08:38,719 - DEBUG - CACHEDIR=/Users/fujiwaraseita/.matplotlib
+2024-12-27 00:08:38,728 - DEBUG - Using fontManager instance from /Users/fujiwaraseita/.matplotlib/fontlist-v390.json
+2024-12-27 00:08:42,438 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:08:42,438 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:08:42,585 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:08:42,734 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:08:42,879 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:08:43,183 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:08:43,340 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:08:43,487 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:08:43,631 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:08:44,943 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:08:45,233 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:08:45,444 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:08:45,537 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-27 00:08:45,901 - DEBUG - Starting component System
+2024-12-27 00:08:45,901 - DEBUG - Starting component Posthog
+2024-12-27 00:08:45,901 - DEBUG - Starting component OpenTelemetryClient
+2024-12-27 00:08:45,901 - DEBUG - Starting component SqliteDB
+2024-12-27 00:08:45,940 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-27 00:08:45,940 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-27 00:08:45,940 - DEBUG - Starting component LocalSegmentManager
+2024-12-27 00:08:45,941 - DEBUG - Starting component LocalExecutor
+2024-12-27 00:08:45,941 - DEBUG - Starting component SegmentAPI
+2024-12-27 00:08:45,956 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:08:46,471 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-27 00:08:47,365 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:08:48,179 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-12-27 00:08:48,440 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:08:48,509 - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-27 00:08:48,670 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:08:56,187 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:08:56,192 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:08:56,328 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:08:56,342 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:08:56,344 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:08:56,492 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:08:56,648 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:08:56,839 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:08:56,984 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:08:57,133 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:08:57,279 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:08:57,723 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:08:57,996 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:08:58,201 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:08:58,352 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:08:58,374 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:08:58,564 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:08:58,958 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:09:08,475 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:09:08,478 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:09:08,619 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:09:08,630 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:09:08,630 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:09:08,785 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:09:09,090 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:09:09,231 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:09:09,375 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:09:09,516 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:09:09,662 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:09:09,806 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:09:10,029 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:09:10,230 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:09:10,382 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:09:10,397 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:09:10,570 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:09:10,830 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:09:17,179 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:09:17,182 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:09:17,323 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:09:17,332 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:09:17,333 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:09:17,471 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:09:17,612 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:09:17,785 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:09:17,933 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:09:18,077 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:09:18,221 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:09:18,362 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:09:18,717 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:09:18,914 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:09:19,069 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:09:19,084 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:09:19,255 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:09:19,647 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:09:27,214 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:09:27,217 - WARNING - WARNING! max_length is not default parameter.
+                    max_length was transferred to model_kwargs.
+                    Please make sure that max_length is what you intended.
+2024-12-27 00:09:27,398 - DEBUG - https://huggingface.co:443 "GET /api/whoami-v2 HTTP/11" 200 624
+2024-12-27 00:09:27,408 - INFO - Use pytorch device_name: cpu
+2024-12-27 00:09:27,408 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2024-12-27 00:09:27,547 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:09:27,829 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-27 00:09:27,974 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/11" 200 0
+2024-12-27 00:09:28,144 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-12-27 00:09:28,442 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-27 00:09:28,589 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-27 00:09:28,735 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/11" 200 0
+2024-12-27 00:09:28,961 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-27 00:09:29,365 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/11" 200 6755
+2024-12-27 00:09:29,517 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/11" 200 6755
+2024-12-27 00:09:29,532 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-27 00:09:29,706 - WARNING - Number of requested results 20 is greater than number of elements in index 12, updating n_results = 12
+2024-12-27 00:09:30,081 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-27 00:09:35,713 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/google/gemma-2b-it HTTP/11" 200 None
+2024-12-27 00:09:36,134 - DEBUG - AnalyticsBatcher shutdown complete
+2024-12-27 00:11:14,247 - INFO - Evaluating metric: answer_correctness
+2024-12-27 00:11:14,332 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:11:14,835 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:21:14,918 - ERROR - Exception raised in Job[0]: TimeoutError()
+2024-12-27 00:21:14,922 - ERROR - Exception raised in Job[1]: TimeoutError()
+2024-12-27 00:31:14,963 - ERROR - Exception raised in Job[2]: TimeoutError()
+2024-12-27 00:31:14,967 - ERROR - Exception raised in Job[3]: TimeoutError()
+2024-12-27 00:41:15,014 - ERROR - Exception raised in Job[4]: TimeoutError()
+2024-12-27 00:41:15,517 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:41:16,271 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:41:16,288 - INFO - answer_correctness result: {'answer_correctness': nan}
+2024-12-27 00:41:16,302 - DEBUG - AnalyticsBatcher shutdown complete
+2024-12-27 00:42:24,755 - INFO - Evaluating metric: answer_relevancy
+2024-12-27 00:42:24,769 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:42:25,245 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:44:53,692 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:44:57,725 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:44:57,734 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:45:04,187 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:45:04,212 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:45:12,143 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:45:12,153 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:45:16,142 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:45:16,225 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:45:16,233 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:45:16,305 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:45:16,670 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:46:17,523 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:46:19,531 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:46:19,537 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:46:20,581 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:46:20,585 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:46:21,622 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:46:21,626 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:46:22,671 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:46:22,987 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:46:22,987 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:46:22,991 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:46:23,427 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:47:15,145 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:47:17,544 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:47:17,548 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:47:19,395 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:47:19,399 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:47:21,238 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:47:21,243 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:47:23,086 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:47:23,603 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:47:23,604 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:47:23,662 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:47:24,250 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:48:32,342 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:48:34,469 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:48:34,479 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:48:36,776 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:48:36,781 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:48:39,157 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:48:39,165 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:48:41,493 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:48:42,453 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:48:42,454 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:48:42,535 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:48:42,992 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:48:54,803 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:48:56,332 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:48:56,336 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:48:58,291 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:48:58,298 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:49:00,739 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:49:00,744 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2024-12-27 00:49:02,840 - DEBUG - http://localhost:11434 "POST /api/embeddings HTTP/11" 200 None
+2024-12-27 00:49:02,863 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:49:02,863 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:49:02,866 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:49:03,046 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:49:03,046 - DEBUG - Grouped events: {('evaluation', ('answer_relevancy',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['answer_relevancy'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:49:03,054 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:49:03,176 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:49:03,183 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:49:03,356 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:49:03,357 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:49:03,358 - INFO - answer_relevancy result: {'answer_relevancy': 0.3736}
+2024-12-27 00:49:03,359 - INFO - Evaluating metric: context_recall
+2024-12-27 00:49:03,361 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:49:03,534 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:53:39,146 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:53:39,149 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:53:39,208 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:53:39,743 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:54:40,920 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:54:40,922 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:54:40,927 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:54:41,386 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:55:52,608 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:55:52,610 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:55:52,689 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:55:53,270 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:56:37,587 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:56:37,590 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:56:37,657 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:56:38,122 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:57:18,442 - DEBUG - Flushing triggered for 1 events
+2024-12-27 00:57:18,444 - DEBUG - Grouped events: {('evaluation', ('context_recall',), 'SINGLE_TURN'): EvaluationEvent(event_type='evaluation', user_id='a-00255ff7eb8048139d5e86ef8ae225cb', ragas_version='0.2.9', metrics=['context_recall'], num_rows=1, evaluation_type='SINGLE_TURN', language='english')}
+2024-12-27 00:57:18,489 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:57:18,979 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:57:18,984 - DEBUG - Starting new HTTPS connection (1): t.explodinggradients.com:443
+2024-12-27 00:57:19,171 - DEBUG - https://t.explodinggradients.com:443 "POST / HTTP/11" 200 15
+2024-12-27 00:57:19,173 - INFO - context_recall result: {'context_recall': 0.5389}
+2024-12-27 00:57:19,178 - DEBUG - AnalyticsBatcher shutdown complete

@@ -1,123 +1,140 @@
 import os
-import yaml
-from langchain_huggingface import HuggingFaceEndpoint
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.chains import LLMChain
+from dotenv import load_dotenv
+from langchain_huggingface import HuggingFaceEndpoint, HuggingFaceEmbeddings
+from langchain_chroma import Chroma 
 from langchain.prompts import PromptTemplate
-from langchain_community.document_loaders import TextLoader
-from langchain_community.embeddings.sentence_transformer import (
-    SentenceTransformerEmbeddings,
-)
-from langchain_community.vectorstores import Chroma
-from langchain_community.vectorstores import Chroma as DeprecatedChroma  # For backward compatibility
 
-from langchain_chroma import Chroma
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_core.runnables import RunnablePassthrough
-import pickle
-from langchain import hub
+from langchain_community.vectorstores import Chroma as DeprecatedChroma
 
 
-def load_config(file_path):
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"Config file not found: {file_path}")
+class RAGApp:
+    def __init__(self, temperature=0.4):
+        # env
+        load_dotenv()
+        self.HUGGING_FACE_API_KEY = os.getenv('HUGGING_FACE_API_KEY')
 
-    with open(file_path, "r") as file:
+        if self.HUGGING_FACE_API_KEY:
+            os.environ["HUGGINGFACEHUB_API_TOKEN"] = self.HUGGING_FACE_API_KEY
+            print("Hugging Face API Key set successfully.")
+        else:
+            raise ValueError("HUGGING_FACE_API_KEY is not set in the .env file.")
+        
+        # HuggingFace Endpoint
+        self.repo_id = "google/gemma-2b-it"
+        self.llm = HuggingFaceEndpoint(
+            repo_id=self.repo_id, max_length=1024, temperature=temperature, timeout=500
+        )
+
+        # Embedding function and database
+        # self.embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+        self.embedding_function = HuggingFaceEmbeddings(model_name="all-mpnet-base-v2")
+        self.db = self.initialize_database()
+
+        # prompt
+        self.prompt = PromptTemplate(
+            template=(
+                "You are an expert assistant. Use the following context to answer the question.\n"
+                "Context:\n{context}\n"
+                "Question:\n{question}\n"
+                # "Provide a detailed response based only on the given context."
+            )
+        )
+
+        # prompt for conversation
+        # self.prompt = ChatPromptTemplate.from_messages([
+        #     ("system", "You are a helpful assistant. Use the following context to answer the question."),
+        #     ("human", "Context: {context}. Question: {question}. Please answer with full detail and explanation:")
+        # ])
+    
+    def initialize_database(self, persist_directory="./chroma_db"):
         try:
-            return yaml.safe_load(file)
-        except yaml.YAMLError as e:
-            raise RuntimeError(f"Error parsing YAML file: {e}")
+            return Chroma(
+                persist_directory=persist_directory,
+                embedding_function=self.embedding_function,
+            )
+        except TypeError:
+            print("Falling back to deprecated Chroma class.")
+            return DeprecatedChroma(
+                persist_directory=persist_directory,
+                embedding_function=self.embedding_function,
+            )
 
-config = load_config("config.yml")
-huggingface_api = config["HUGGING_FACE"]["API_KEY"]
+    def __format_docs__(self, docs):
+        if not docs:
+            return "No relevant documents found."
+        return "\n\n".join(doc.page_content for doc in docs)
 
-# Set up the Hugging Face Hub API token
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = huggingface_api
+    def get_response(self, question, eval_mode=False):
 
-# Define the repository ID for the Gemma 2b model
-repo_id = "google/gemma-2b-it"
+        #-------- Test: raw answer (no RAG system) ----
+        # template = """Question: {question}
+        # Answer: Answer with full detail and explanation"""
+        # prompt = PromptTemplate.from_template(template)
+        # llm_chain = (
+        #     RunnablePassthrough() 
+        #     | self.llm
+        # )
+        # result = llm_chain.invoke(question)
+        #----------------------------------
+        
+        rag_chain = (
+            RunnablePassthrough()  # Pass the formatted string directly
+            | self.llm  # The HuggingFaceEndpoint processes the input string
+        )
 
-# Set up a Hugging Face Endpoint for Gemma 2b model
-llm = HuggingFaceEndpoint(
-    repo_id=repo_id, 
-    max_length=1024, temperature=0.8,
-    timeout=300  # タイムアウトを300秒に延長
-)
+        # search type: similarity, mmr, ...
+        retriever = self.db.as_retriever(search_type="mmr", search_kwargs={'k': 4, 'fetch_k': 20})
+        docs = retriever.invoke(question)
 
-question = input("Enter your question here:")
+        if eval_mode:
 
-template = """Question: {question}
+            # only evalaute top context due to my PC spec
+            formatted_context = [docs[0].page_content] if docs[0] else ["No relevant documents found."]
+            
+            # Format the input
+            formatted_input = self.prompt.format(context=formatted_context, question=question)
+            # print("========== DEBUG: Formatted Input ==========")
+            # print(formatted_input)
 
-Answer: Let's think step by step."""
+            # Invoke the chain and debug the output
+            result = rag_chain.invoke(formatted_input)
+            # print("========== DEBUG: Raw LLM Output ==========")
+            # print(result)
 
-prompt = PromptTemplate.from_template(template)
-llm_chain = (prompt | llm)
+            return {
+                "user_input": question,
+                "contexts": formatted_context,
+                "response": result.strip(),  # Strip unnecessary whitespace
+            }
+        else:
+            formatted_context = self.__format_docs__(docs)  # Format the documents into a context string
+            # generate prompt
+            formatted_input = self.prompt.format(context=formatted_context, question=question)
 
-persist_directory = "./chroma_db"
+            print("DEBUG:")
+            print(formatted_input)
 
-# Recreate the embedding function
-embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+            result = rag_chain.invoke(formatted_input)
 
-try:
-    # Load the Chroma database
-    db = Chroma(
-        persist_directory=persist_directory,
-        embedding_function=embedding_function,  # Use the correct parameter
-    )
-except TypeError:
-    print("Falling back to the deprecated Chroma class.")
-    db = DeprecatedChroma(
-        persist_directory=persist_directory,
-        embedding_function=embedding_function,
-    )
+            if "The context explains that" in result:
+                cleaned_response = result.replace("The context explains that ", "")
+                return cleaned_response
 
-print("Database loaded successfully!")
+            return result
+
+def main():
+    # インスタンス作成
+    rag_app = RAGApp()
+
+    # ユーザー入力
+    question = input("Enter your question:")
+    response = rag_app.get_response(question)
+    print("Answer:")
+    print(response)
 
 
-# Create retriever
-retriever = db.as_retriever(search_type="mmr", search_kwargs={'k': 4, 'fetch_k': 20})
-
-# Pull the RAG prompt from LangChain Hub
-try:
-    prompt = PromptTemplate(
-    template=(
-        "You are a helpful assistant. Use the following context to answer the question.\n\n"
-        "Context:\n{context}\n\n"
-        "Question:\n{question}\n\n"
-        "Answer with full detail and explanation:"
-    )
-)
-
-except Exception as e:
-    print(f"Error loading RAG prompt: {e}")
-    exit()
-
-# Define document formatter
-def format_docs(docs):
-    if not docs:
-        return "No relevant documents found."
-    return "\n\n".join(doc.page_content for doc in docs)
-
-# Format the context and question
-def format_rag_input(context, question):
-    return prompt.format(context=context, question=question)
-
-try:
-    rag_chain = (
-        RunnablePassthrough()  # Pass the formatted string directly
-        | llm  # The HuggingFaceEndpoint processes the input string
-    )
-
-    # Retrieve relevant documents
-    docs = retriever.invoke(question)
-    formatted_context = format_docs(docs)  # Format the documents into a context string
-
-    # Create the input string
-    formatted_input = format_rag_input(context=formatted_context, question=question)
-
-    # Run the chain
-    rag_result = rag_chain.invoke(formatted_input)
-    print(f"RAG Result: {rag_result}")
-except Exception as e:
-    print(f"Error in RAG Chain: {e}")
+if __name__ == "__main__":
+    main()
 

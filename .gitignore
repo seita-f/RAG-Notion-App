@@ -1,11 +1,20 @@
-# Ignore config file
-config.yml
+# Hide environment variables
+.env
 
-# Ignore DB folder
+# Hide data 
 /chroma_db/
+/notion-api/notion_contents.json
 
 # Ignore venv
 /venv/
 
-# Ignore test file
-test.py
+# Ignore test
+/test/
+
+# Ignore cache
+**/__pycache__/**
+
+# Mac hiden file
+.DS_Store
+
+
