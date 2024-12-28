@@ -63,6 +63,7 @@ Note:
 - Since RAG evaluation also utilizes an LLM, the accuracy is slightly different each time. Setting the temperature to 0.1 or calculating the average accuracy could lead to more precise measurements.
 
 HuggingFace: https://huggingface.co/models
+Ragas: https://docs.ragas.io/en/stable/
 
 
 
