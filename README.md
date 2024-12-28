@@ -51,7 +51,7 @@ llm:
 ```
 
 Embedding Model | LLM Model | parameter change | Answer Relevancy | Context Recall | Human check | average answer time (s) | Note
----  |  --- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- | --- | --- | ---
 all-mpnet-base-v2 | google/gemma-2b-it | - | **0.6279** | 0.7578 | 4/5 | 12.68 | This looks the best
 all-mpnet-base-v2 | google/gemma-2b-it | chunk_size: 512 | 0.1460 | 0.6000 | 2/5 | 21.87 |
 all-MiniLM-L12-v2 | google/gemma-2b-it | - | 0.4875 | 0.7000 | 3/5 | 22.40 |
