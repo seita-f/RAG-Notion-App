@@ -6,8 +6,7 @@ Additionally, I set a restriction on not spending any money during the app devel
 Version | Description
 --- | --- 
 V1.0 | Notion API & RAG Prototype App
-V1.1 | Added option for changing tempeature & evaluation
-
+V1.1 | Evaluation mode using RAGAs & config.yaml
 
 # Technologies & Env
 - Python 3.11
