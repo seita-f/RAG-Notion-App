@@ -33,13 +33,34 @@ V1.1 | Evaluation mode using RAGAs & config.yaml
 
 For evaluation, I utilized RAGAS along with the Llama 3 LLM model. The evaluation was conducted using 5 questions paired with their corresponding ground truth answers.
 
-Embedding Model | LLM Model | parameter | Answer Relevancy | Context Recall | Human check
----  |  --- | --- | --- | --- | ----
-all-mpnet-base-v2 | google/gemma-2b-it | chunk_size: 1024 | 0.6279 | 0.7578 | 4/5
-all-mpnet-base-v2 | google/gemma-2b-it | chunk_size: 512 | 0.1460 | 0.6000 | 2/5
+common parameters:
+```
+embedding:
+  model: all-mpnet-base-v2  # all-MiniLM-L12-v2, all-mpnet-base-v2, all-distilroberta-v1 etc
+  chunk_size: 1024
+  overlap: 100
+  db_dir: ./chroma_db
+
+llm:
+  model: mistralai/Mistral-7B-Instruct-v0.2 # google/gemma-2b-it, mistralai/Mistral-7B-Instruct-v0.2, openai-community/gpt2
+  search_type: mmr          
+  temperature: 0.4
+  k: 4
+  fetch_k: 20
+  max_token: 1024
+```
+
+Embedding Model | LLM Model | parameter change | Answer Relevancy | Context Recall | Human check | average answer time (s) | Note
+---  |  --- | --- | --- | --- | --- | ---
+all-mpnet-base-v2 | google/gemma-2b-it |  | **0.6279** | 0.7578 | 4/5 | 12.68 | This looks the best
+all-mpnet-base-v2 | google/gemma-2b-it | chunk_size: 512 | 0.1460 | 0.6000 | 2/5 | 21.87
+all-MiniLM-L12-v2 | google/gemma-2b-it | | 0.4875 | 0.7000 | 3/5 | 22.40
+all-MiniLM-L12-v2 | mistralai/Mistral-7B-Instruct-v0.2 |  | 0.5545 | 0.6933 | 5/5 | 1.66 | The answer is correct, but repeat the same thing over and over again.
+all-MiniLM-L12-v2 | openai-community/gpt2 | | 0.3485 | 0.7733 | 5/5 | 19.23 | The answer is correct, but repeat the same thing over and over again.
 
 
 HuggingFace: https://huggingface.co/models
+
 
 
 
